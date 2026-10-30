@@ -19,7 +19,7 @@ import { followBlend, segmentDistanceSquared, worldDisplay } from './display';
 import { WaterReflections } from './atmosphere';
 import { tactile } from '../platform';
 
-interface EnemyActor { def:EnemyDef; sprite:Phaser.GameObjects.Sprite; shadow:Phaser.GameObjects.Ellipse; bar:Phaser.GameObjects.Rectangle; hp:number; maxHp:number; attackAt:number; cooldown:number; target:{x:number;y:number}|null; phase:boolean; staggerUntil:number; knockback:{x:number;y:number;left:number}|null; charge:{x:number;y:number;left:number}|null; damageLabel?:Phaser.GameObjects.Text; damageAt?:number; damageTotal?:number; recoil?:Phaser.Tweens.Tween; baseScale?:number; flashUntil?:number; home:{x:number;y:number}; patrol:{x:number;y:number}|null; patrolAt:number; patrolStep:number; }
+interface EnemyActor { def:EnemyDef; sprite:Phaser.GameObjects.Sprite; shadow:Phaser.GameObjects.Ellipse; bar:Phaser.GameObjects.Rectangle; hp:number; maxHp:number; attackAt:number; cooldown:number; target:{x:number;y:number}|null; phase:boolean; staggerUntil:number; knockback:{x:number;y:number;left:number}|null; charge:{x:number;y:number;left:number}|null; damageLabel?:Phaser.GameObjects.Text; damageAt?:number; damageTotal?:number; recoil?:Phaser.Tweens.Tween; baseScale?:number; flashUntil?:number; tell?:Phaser.GameObjects.Image; home:{x:number;y:number}; patrol:{x:number;y:number}|null; patrolAt:number; patrolStep:number; }
 interface Projectile { sprite:Phaser.GameObjects.Image; vx:number; vy:number; hostile:boolean; damage:number; life:number; }
 export interface WorldHud { nearby:ObjectPoint|null; x:number; y:number; boss:{name:string;hp:number;max:number}|null; skill:number; dodge:number; running:boolean; guidance:{label:string;angle:number;distance:number;quest:string}|null; loot:Loot|null; reveal:{title:string;line:string}|null; zone:string; }
 
@@ -66,7 +66,6 @@ export class WorldScene extends Phaser.Scene {
   private waterReflections!:WaterReflections;
   private playerShadow!:Phaser.GameObjects.Ellipse;
   private halo!:Phaser.GameObjects.Image;
-  private routeInk!:Phaser.GameObjects.Graphics;
   private guidance:WorldHud['guidance']=null;
   private receipt:Loot|null=null;
   private receiptUntil=0;
@@ -82,6 +81,7 @@ export class WorldScene extends Phaser.Scene {
   }
   create(){
     registerGroundPivots(this);registerAnimations(this);createFxTextures(this);createTerrain(this);
+    this.textures.get('landmarks').setFilter(Phaser.Textures.FilterMode.LINEAR);
     const canvas=this.textures.createCanvas('glow',128,128)!;
     const ctx=canvas.context,g=ctx.createRadialGradient(64,64,0,64,64,64);
     g.addColorStop(0,'rgba(255,207,125,.45)');g.addColorStop(.4,'rgba(255,207,125,.12)');g.addColorStop(1,'rgba(255,207,125,0)');ctx.fillStyle=g;ctx.fillRect(0,0,128,128);canvas.refresh();
@@ -108,13 +108,15 @@ export class WorldScene extends Phaser.Scene {
     const backdrop=this.make.graphics({},false);backdrop.fillStyle(l.bounded?0x11131d:0x45474e).fillRect(0,0,l.width,l.height);rt.draw(backdrop);backdrop.destroy();
     const base=r.theme==='ice'?3:r.theme==='gold'?2:r.theme==='marsh'?4:0;
     const floor=r.type==='interior'?5:r.type==='dungeon'?(r.theme==='ice'?4:r.theme==='gold'?9:r.theme==='forest'?1:8):r.type==='town'?1:2;
+    // Enclosed spaces are lit only by their lanterns, so the floor itself is drawn in half-light.
+    const shade=r.type==='dungeon'?0xa9b0c6:r.type==='interior'?0xb8b6c2:0xffffff;
     const verges=createRoadVergeAtlas(this,l,base,floor);
     rt.beginDraw();
     for(let y=0;y<l.rows;y++)for(let x=0;x<l.cols;x++){
       const k=y*l.cols+x,path=l.paths.has(k),water=l.water.has(k),wall=l.walls.has(k);
       if(l.bounded&&!path&&!wall&&!water)continue;
-      if(verges?.frames.has(k))rt.batchDrawFrame(verges.key,String(k),x*16,y*16);
-      else rt.batchDrawFrame('terrain',terrainVariant(wall?7:water?6:path?floor:base,x,y),x*16,y*16);
+      if(verges?.frames.has(k))rt.batchDrawFrame(verges.key,String(k),x*16,y*16,1,shade);
+      else rt.batchDrawFrame('terrain',terrainVariant(wall?7:water?6:path?floor:base,x,y),x*16,y*16,1,shade);
     }rt.endDraw();
     drawSurfaceDetails(this,l,r);
     this.waterReflections=new WaterReflections(this,l);
@@ -124,14 +126,20 @@ export class WorldScene extends Phaser.Scene {
       const sprite=this.add.sprite(p.x,p.y,texture,p.frame).setOrigin(.5,p.ground?.5:1).setDepth(p.ground?-980:p.y).setScale((p.scale??1)*assetScale(texture));
       if(p.width)sprite.setDisplaySize(p.width,p.width*sprite.frame.height/sprite.frame.width);
       if(!p.ground&&!p.frame.includes('house'))this.add.ellipse(p.x,p.y-.6,texture==='furniture'?sprite.displayWidth*.72:p.solid?.w??10,texture==='furniture'?3:2.5,0x10111a,.3).setDepth(p.y-.3);
-      if(p.tint)sprite.setTint(p.tint);const anim=p.frame.substring(0,p.frame.lastIndexOf('/')).replaceAll('/','_');if(this.anims.exists(anim))sprite.play(anim);
-      if(p.light){const light=this.add.image(p.x,p.y-14,'glow').setBlendMode('ADD').setScale(r.type==='interior'?.7:.8).setAlpha(.55).setDepth(950);if(!this.store.settings.reducedMotion)this.tweens.add({targets:light,alpha:.38,duration:1800+random()*1300,yoyo:true,repeat:-1});}
+      if(p.tint)sprite.setTint(p.tint);else if(shade!==0xffffff)sprite.setTint(shade);const anim=p.frame.substring(0,p.frame.lastIndexOf('/')).replaceAll('/','_');if(this.anims.exists(anim))sprite.play(anim);
+      if(p.light){const lit=r.type==='dungeon'?.75:r.type==='interior'?.65:.55;const light=this.add.image(p.x,p.y-14,'glow').setBlendMode('ADD').setScale(r.type==='interior'?.7:.8).setAlpha(lit).setDepth(950);if(!this.store.settings.reducedMotion)this.tweens.add({targets:light,alpha:lit*.7,duration:1800+random()*1300,yoyo:true,repeat:-1});}
+    }
+    if(!this.store.settings.reducedMotion){
+      const snow=r.theme==='ice',spore=r.theme==='marsh'&&r.type!=='interior',leaf=r.theme==='forest'&&r.type!=='dungeon';
+      const flake=snow?'fx_spark':spore?'proj_spore':leaf?'fx_leaf':'fx_spark';
+      const motes=snow?0xdbe6ff:spore?0xb2c39c:leaf?0xc9b47b:r.theme==='gold'?0xe2bd7d:0xb9bfd0;
+      this.add.particles(0,0,flake,{emitZone:{type:'random',source:new Phaser.Geom.Rectangle(0,0,l.width,l.height) as unknown as Phaser.Types.GameObjects.Particles.RandomZoneSource},lifespan:{min:5200,max:11000},speedX:{min:-7,max:7},speedY:{min:3,max:snow?16:10},scale:{start:snow?.38:.3,end:snow?.24:.16},alpha:{start:.32,end:0},frequency:snow?260:520,quantity:1,tint:motes,blendMode:'ADD'}).setDepth(960);
     }
     for(const o of l.objects)this.drawObject(o);for(const e of l.enemies)this.spawnEnemy(e.id,e.x,e.y);
     let position=this.store.s.position;
     if(!this.walkable(position.x,position.y)){position=l.spawn;this.store.s.position={...position};}
     this.playerShadow=this.add.ellipse(position.x,position.y,15,4,0x070b15,.5);
-    this.player=this.add.sprite(position.x,position.y,'heroes',CLASSES[this.store.s.discipline].sprite+'/walk/'+this.direction+'/0').setScale(1.05);
+    this.player=this.add.sprite(position.x,position.y,'heroes',CLASSES[this.store.s.discipline].sprite+'/walk/'+this.direction+'/0');
     this.player.on(Phaser.Animations.Events.ANIMATION_UPDATE,(animation:Phaser.Animations.Animation,frame:Phaser.Animations.AnimationFrame)=>{
       const p=this.pendingStrike;if(p?.animation===animation.key&&frame.index>=p.frame)this.resolveStrike();
     });
@@ -139,7 +147,7 @@ export class WorldScene extends Phaser.Scene {
       if(this.pendingStrike?.animation===animation.key)this.resolveStrike();
     });
     this.halo=this.add.image(this.player.x,this.player.y-10,'glow').setBlendMode('ADD').setScale(.35).setDepth(980).setAlpha(.25);
-    this.routeInk=this.add.graphics().setDepth(-960);this.resizeCamera();this.cameras.main.fadeIn(this.store.settings.reducedMotion?0:220,10,14,24);
+    this.resizeCamera();this.cameras.main.fadeIn(this.store.settings.reducedMotion?0:220,10,14,24);
     this.audio.ambience(r.ambience);this.store.notice(r.name);
   }
   private drawObject(o:ObjectPoint){
@@ -168,7 +176,7 @@ export class WorldScene extends Phaser.Scene {
   private spawnEnemy(id:string,x:number,y:number){
     const original=ENEMIES[id];if(!original||original.boss&&this.store.s.defeated.includes(id))return;
     const level=Math.max(0,regionById(this.currentRegion).level-1);
-    const def=original.boss?original:{...original,hp:Math.round(original.hp*(1+level*.14)),atk:Math.round(original.atk*(1+level*.08))};
+    const def={...original,hp:Math.round(original.hp*(1+level*(original.boss?.16:.14))),atk:Math.round(original.atk*(1+level*(original.boss?.10:.08)))};
     const bossFrames:Record<string,string>={rootwarden:'b/MinotaurA',archivist:'b/BlackMagusB',glasskeeper:'b/GeniusA',hollowking:'b/BlackMagusA'};
     const sprite=this.add.sprite(x,y,def.boss?'battlers':'monsters',def.boss?bossFrames[id]:def.sprite+'/down/0').setDepth(y);if(def.boss)sprite.setScale(.8);
     const shadow=this.add.ellipse(x,y,def.boss?40:14,def.boss?7:4,0x0c121a,.4).setDepth(y-1);
@@ -211,6 +219,13 @@ export class WorldScene extends Phaser.Scene {
     this.actionUntil=this.time.now+lock;return key;
   }
   private nearestEnemy(range=240){return this.actors.filter(e=>e.hp>0&&Math.hypot(e.sprite.x-this.player.x,e.sprite.y-this.player.y)<range).sort((a,b)=>Math.hypot(a.sprite.x-this.player.x,a.sprite.y-this.player.y)-Math.hypot(b.sprite.x-this.player.x,b.sprite.y-this.player.y))[0];}
+  private clearTell(e:EnemyActor){e.tell?.destroy();e.tell=undefined;}
+  private showTell(e:EnemyActor,radius:number,duration:number){
+    this.clearTell(e);
+    const ring=this.add.image(e.sprite.x,e.sprite.y-1,'fx_ring_hd').setTint(0xd87952).setBlendMode('ADD').setAlpha(.45).setScale(radius/64*.45).setDepth(e.sprite.y-1);
+    this.tweens.add({targets:ring,scaleX:radius/64,scaleY:radius/64,alpha:.85,duration,ease:'Sine.In'});
+    e.tell=ring;
+  }
   private actionPlaying(){return this.player.anims.isPlaying&&/_(attack|bow|throw|spin)(_|$)/.test(this.player.anims.currentAnim?.key??'');}
   private resolveStrike(){
     const p=this.pendingStrike;if(!p)return;this.pendingStrike=null;
@@ -308,7 +323,7 @@ export class WorldScene extends Phaser.Scene {
     this.lastCombatAt=now;
     const dx=e.sprite.x-this.player.x,dy=e.sprite.y-this.player.y,d=Math.max(1,Math.hypot(dx,dy)),force=e.def.boss?24:heavy?130:75;
     e.staggerUntil=now+(e.def.boss?55:heavy?230:120);e.knockback={x:dx/d*force,y:dy/d*force,left:.12};
-    if(heavy&&!e.def.boss){e.target=null;e.cooldown=now+550;e.charge=null;}
+    if(heavy&&!e.def.boss){e.target=null;e.cooldown=now+550;e.charge=null;this.clearTell(e);}
     if(e.damageLabel?.active&&now-(e.damageAt??0)<180){e.damageTotal=(e.damageTotal??0)+amount;e.damageLabel.setText(String(e.damageTotal));}
     else{e.damageTotal=amount;e.damageLabel=this.float(e.sprite.x,e.sprite.y,String(amount));}e.damageAt=now;
     e.sprite.setTintFill(heavy?0xffe1a6:0xf7edd9);e.flashUntil=now+65;this.impact(e.sprite.x,e.sprite.y-9,heavy,Math.atan2(dy,dx));
@@ -319,7 +334,7 @@ export class WorldScene extends Phaser.Scene {
     if(now>this.hitSoundAt){this.audio.sfx('hit');tactile(this.store.settings.haptics);this.hitSoundAt=now+120;}
     if(heavy&&this.store.settings.screenShake&&!this.store.settings.reducedMotion)this.cameras.main.shake(70,.0013);
     if(e.hp>0)return;
-    e.bar.destroy();e.shadow.destroy();e.sprite.anims.stop();
+    e.bar.destroy();e.shadow.destroy();e.sprite.anims.stop();this.clearTell(e);
     this.effect('fx_smoke',e.sprite.x,e.sprite.y-7,0xc5bca9,e.def.boss?2.6:1.1,310).setAlpha(.45);
     this.tweens.add({targets:e.sprite,alpha:0,scaleX:e.baseScale*.9,scaleY:e.baseScale*.9,duration:240,ease:'Cubic.In',onComplete:()=>e.sprite.destroy()});
     this.store.s.gold+=e.def.gold;this.store.addXp(e.def.xp);const drops=rollEnemyDrops(e.def.id);applyLoot(this.store.s.items,drops);
@@ -331,12 +346,14 @@ export class WorldScene extends Phaser.Scene {
   private hurt(amount:number){
     if(this.time.now<this.invulnerable||this.currentRegion!==this.store.s.region)return;
     const multiplier=this.store.settings.difficulty==='story'?.45:this.store.settings.difficulty==='heroic'?1.35:1;
-    const damage=Math.max(2,Math.round((amount-statsFor(this.store.s).def*.55)*multiplier));this.store.s.hp=Math.max(0,this.store.s.hp-damage);this.float(this.player.x,this.player.y,'-'+damage,'#eb9990');this.invulnerable=this.time.now+800;
+    // Armour may soften a blow, never erase it: at least a quarter of the strike always lands.
+    const raw=Math.max(amount*.25,amount-statsFor(this.store.s).def*.55);
+    const damage=Math.max(2,Math.round(raw*multiplier));this.store.s.hp=Math.max(0,this.store.s.hp-damage);this.float(this.player.x,this.player.y,'-'+damage,'#eb9990');this.invulnerable=this.time.now+800;
     this.player.setTintFill(0xed9a83);this.time.delayedCall(150,()=>this.player?.clearTint());if(this.store.settings.screenShake&&!this.store.settings.reducedMotion)this.cameras.main.shake(100,.003);this.audio.sfx('player_hurt');
     if(this.store.s.hp===0){this.store.die();this.invulnerable=this.time.now+1500;}this.store.changed();
   }
   private updateGuidance(now:number){
-    if(now<this.routeAt)return;this.routeAt=now+650;this.routeInk.clear();
+    if(now<this.routeAt)return;this.routeAt=now+650;
     const id=currentTrackedQuest(this.store.s),goal=questGoal(this.store.s,id,this.layout);this.guidance=null;if(!goal)return;
     const q=QUESTS.find(q=>q.id===id);
     if(q?.event==='kill'&&!ENEMIES[q.target]?.boss&&goal.region===this.currentRegion){const living=this.actors.find(e=>e.hp>0&&e.def.id===q.target);if(living){goal.x=living.sprite.x;goal.y=living.sprite.y;}}
@@ -398,19 +415,20 @@ export class WorldScene extends Phaser.Scene {
       if(e.flashUntil&&now>=e.flashUntil){e.sprite.clearTint();e.flashUntil=0;}
       const ex=this.player.x-e.sprite.x,ey=this.player.y-e.sprite.y,distance=Math.hypot(ex,ey),radius=e.def.boss?42:22;
       e.bar.setPosition(e.sprite.x,e.sprite.y-(e.def.boss?68:26)).setScale(e.hp/e.maxHp,1);e.shadow.setPosition(e.sprite.x,e.sprite.y).setDepth(e.sprite.y-1);e.sprite.setDepth(e.sprite.y);
+      e.tell?.setPosition(e.sprite.x,e.sprite.y-1).setDepth(e.sprite.y-1);
       if(e.def.boss&&!e.phase&&e.hp<e.maxHp*.5){e.phase=true;this.store.notice('The guardian’s resolve breaks.');}
       if(e.knockback){const step=Math.min(dt,e.knockback.left),px=e.sprite.x+e.knockback.x*step,py=e.sprite.y+e.knockback.y*step;if(this.walkable(px,e.sprite.y))e.sprite.x=px;if(this.walkable(e.sprite.x,py))e.sprite.y=py;const decay=Math.exp(-step*14);e.knockback.x*=decay;e.knockback.y*=decay;e.knockback.left-=dt;if(e.knockback.left<=0)e.knockback=null;}
       if(e.charge){const ratio=Math.min(1,dt/e.charge.left),px=Phaser.Math.Linear(e.sprite.x,e.charge.x,ratio),py=Phaser.Math.Linear(e.sprite.y,e.charge.y,ratio);if(this.walkable(px,e.sprite.y))e.sprite.x=px;if(this.walkable(e.sprite.x,py))e.sprite.y=py;e.charge.left-=dt;if(Math.hypot(this.player.x-e.sprite.x,this.player.y-e.sprite.y)<radius+8)this.hurt(e.def.atk);if(e.charge.left<=0)e.charge=null;continue;}
       if(now<e.staggerUntil)continue;
       if(e.target){
-        if(now<e.attackAt)continue;const target=e.target;e.target=null;
+        if(now<e.attackAt)continue;const target=e.target;e.target=null;this.clearTell(e);
         if(e.def.behavior==='ranged'){const angle=Math.atan2(target.y-e.sprite.y,target.x-e.sprite.x),count=e.def.boss?(e.phase?8:5):1;for(let i=0;i<count;i++)this.projectile(e.sprite.x,e.sprite.y-6,e.def.boss&&e.phase?i*Math.PI*2/count:angle+(i-(count-1)/2)*.24,e.def.boss?115:95,true,e.def.atk,e.def.boss?0xe5b877:0xbab2dd);}
         else{if(e.def.behavior==='charge'&&this.walkable(target.x,target.y))e.charge={x:target.x,y:target.y,left:.18};else if(Math.hypot(this.player.x-target.x,this.player.y-target.y)<radius+8)this.hurt(e.def.atk);}
         e.cooldown=now+(e.phase?1100:e.def.boss?1750:1900);
       }else if(distance<(e.def.boss?210:145)){
         const range=e.def.behavior==='ranged'?120:e.def.behavior==='charge'?85:29;
         if(distance>range){const step=e.def.speed*dt/Math.max(1,distance),px=e.sprite.x+ex*step,py=e.sprite.y+ey*step;if(this.walkable(px,e.sprite.y))e.sprite.x=px;if(this.walkable(e.sprite.x,py))e.sprite.y=py;const anim=e.def.sprite+'_'+dirFromVector(ex,ey);if(!e.def.boss&&this.anims.exists(anim))e.sprite.play(anim,true);}
-        else if(now>e.cooldown){e.target={x:this.player.x,y:this.player.y};e.attackAt=now+(e.def.boss?850:650);e.sprite.anims.stop();}
+        else if(now>e.cooldown){const windup=e.def.boss?850:650;e.target={x:this.player.x,y:this.player.y};e.attackAt=now+windup;e.sprite.anims.stop();this.showTell(e,e.def.boss?46:e.def.behavior==='charge'?34:28,windup);}
       }else if(!e.def.boss){
         if(now>e.patrolAt){
           const a=e.home.x*.07+e.home.y*.03+(++e.patrolStep)*2.4;

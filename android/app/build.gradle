@@ -21,8 +21,8 @@ android {
         applicationId "com.eldervale.hollowsun"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 8
-        versionName "1.6.0"
+        versionCode 9
+        versionName "1.7.0"
         resValue 'string', 'admob_app_id', monetizationValues.getProperty('admobAppId')
         resValue 'string', 'admob_banner_id', monetizationValues.getProperty('bannerId')
         resValue 'string', 'admob_interstitial_id', monetizationValues.getProperty('interstitialId')

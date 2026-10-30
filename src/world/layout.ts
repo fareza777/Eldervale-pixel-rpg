@@ -11,7 +11,7 @@ export function houseDoorOffset(frame:string):number {
   const offsets:Record<string,number>={'p/house_14':-2,'p/house_08':9,'p/house_10':9,'p/house_01':9,'p/house_11':9,'p/house_12':9,'p/house_25':3,'p/house_26':3};
   return offsets[frame]??0;
 }
-export const TILE=16, COLS=54, ROWS=40, WIDTH=COLS*TILE, HEIGHT=ROWS*TILE;
+export const TILE=16;
 export interface Prop { frame:string; x:number; y:number; scale?:number; width?:number; tint?:number; light?:boolean; solid?:{w:number;h:number}; texture?:string; ground?:boolean; }
 export interface ObjectPoint { id:string; kind:'npc'|'exit'|'house'|'ward'|'lore'|'herb'|'ore'|'chest'|'memory'|'letter'|'bell'|'observatory'|'cat'|'camp'|'event'; target:string; name:string; x:number; y:number; frame?:string; texture?:string; story?:string; axis?:'up'|'down'|'left'|'right'; }
 export interface Spawn { id:string; x:number; y:number; }

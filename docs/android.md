@@ -1,4 +1,4 @@
-# Eldervale Android — v1.5.1
+# Eldervale Android — v1.7.0
 
 The primary target is an Android phone held in portrait orientation. The
 browser preview shares its phone layout. Android 7.0/API 24 is the minimum;
@@ -8,12 +8,12 @@ the app compiles and targets API 36. The game is bundled locally with Capacitor.
 
 | File in releases/ | Purpose |
 |---|---|
-| Eldervale-Android-v1.5.1.apk | Signed release APK for installing on a phone |
-| Eldervale-Play-v1.5.1.aab | Signed Android App Bundle for Play Console |
+| Eldervale-Android-v1.7.0.apk | Signed release APK for installing on a phone |
+| Eldervale-Play-v1.7.0.aab | Signed Android App Bundle for Play Console |
 | Eldervale-Android-debug.apk | Debug build for WebView/device QA |
 
 App ID: `com.eldervale.hollowsun`. App name: **Eldervale**.
-Version name: **1.5.1**. Version code: **7**.
+Version name: **1.7.0**. Version code: **9**.
 
 ## Touch layout
 

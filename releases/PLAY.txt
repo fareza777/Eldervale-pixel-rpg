@@ -1,9 +1,9 @@
 ELDERVALE — THE HOLLOW SUN
 
-ANDROID PORTRAIT EDITION — v1.6.0
+ANDROID PORTRAIT EDITION — v1.7.0
 
-Install Eldervale-Android-v1.6.0.apk on an Android phone.
-Eldervale-Play-v1.6.0.aab is the signed Google Play upload bundle.
+Install Eldervale-Android-v1.7.0.apk on an Android phone.
+Eldervale-Play-v1.7.0.aab is the signed Google Play upload bundle.
 The app has not been published to Google Play.
 
 This build uses official Google TEST AdMob banner, interstitial and rewarded ads.

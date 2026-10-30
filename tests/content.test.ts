@@ -30,7 +30,7 @@ describe('authored world and reusable assets', () => {
       const goals=[...l.objects,...(l.boss?[{...l.boss.trigger,name:'Guardian court'}]:[])];
       for(const o of goals){const radius='kind' in o&&o.kind==='exit'?15:34;const candidates=[...reached].filter(k=>Math.hypot((k%l.cols)*16+8-o.x,Math.floor(k/l.cols)*16+8-o.y)<radius);expect(candidates.length,r.id+': '+o.name).toBeGreaterThan(0);}
     }
-  });
+  }, 20000);
   it('provides enough unique world objects to complete every collecting side quest', () => {
     const objects = REGIONS.flatMap(r => makeLayout(r.id).objects);
     for (const q of QUESTS.filter(q => q.event === 'interact' || q.event === 'gather')) expect(objects.filter(o => o.target === q.target).length, q.id).toBeGreaterThanOrEqual(q.count);

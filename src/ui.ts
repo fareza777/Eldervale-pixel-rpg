@@ -71,7 +71,7 @@ export class GameUI {
             <div class="title-links"><button data-action="about">About</button><span>·</span><button data-action="share">Share ${icon('share', 13)}</button><span>·</span><button data-action="rate">Rate ${icon('star', 13)}</button></div>
           </div>
           <aside class="title-whisper"><span class="whisper-line"></span><p>“We may forget the way home.<br>Home will never forget us.”</p><span>— LYRA’S LAST LETTER</span></aside>
-          <footer class="title-footer"><span>${icon('feather', 14)} Crafted for the wanderer in you.</span><span>v1.6.0 <i></i> SINGLE PLAYER <i></i> <span id="offline-status">LOCAL SAVE</span></span></footer>
+          <footer class="title-footer"><span>${icon('feather', 14)} Crafted for the wanderer in you.</span><span>v1.7.0 <i></i> SINGLE PLAYER <i></i> <span id="offline-status">LOCAL SAVE</span></span></footer>
           <div class="embers"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </section>
         <section id="game-screen" class="game-screen" hidden>
@@ -224,7 +224,14 @@ export class GameUI {
       case 'attack': this.world?.attack(); break;
       case 'skill': this.world?.skill(); break;
       case 'dodge': this.world?.dodge(); break;
-      case 'potion': if (this.mode === 'game' && !this.store.paused && this.store.use('potion')) this.audio.sfx('potion'); break;
+      case 'potion': {
+        if (this.mode !== 'game' || this.store.paused) break;
+        const quick = this.quickConsumable();
+        if (quick) { if (this.store.use(quick)) this.audio.sfx('potion'); break; }
+        const stats = statsFor(this.store.s);
+        if (this.store.s.hp < stats.maxHp || this.store.s.mana < stats.maxMana) this.store.notice('No healing supplies left.');
+        break;
+      }
       case 'ending': if (this.store.chooseEnding(id as keyof typeof ENDINGS)) this.ending(); break;
       case 'view-ending': this.ending(); break;
       case 'event-help': this.resolveEvent(id!, true); break;
@@ -324,10 +331,29 @@ export class GameUI {
     document.body.classList.toggle('reduced-motion', this.store.settings.reducedMotion);
     if (!this.store.state) return; const s = this.store.s, stats = statsFor(s), r = regionById(s.region);
     const text = (id: string, value: string) => { const el = document.getElementById(id); if (el) el.textContent = value; };
-    text('hud-name', s.name); text('hud-level', String(s.level)); text('hp-value', Math.ceil(s.hp) + ' / ' + stats.maxHp); text('mp-value', Math.floor(s.mana) + ' / ' + stats.maxMana); text('hud-gold', s.gold.toLocaleString()); text('hud-location', r.name); text('hud-subtitle', r.subtitle); text('minimap-label', r.name.toUpperCase()); text('potion-count', String(s.items.potion ?? 0)); text('hud-xp', s.xp + ' / ' + xpForLevel(s.level) + ' XP · Level ' + s.level);
+    const quick = this.quickConsumable();
+    text('hud-name', s.name); text('hud-level', String(s.level)); text('hp-value', Math.ceil(s.hp) + ' / ' + stats.maxHp); text('mp-value', Math.floor(s.mana) + ' / ' + stats.maxMana); text('hud-gold', s.gold.toLocaleString()); text('hud-location', r.name); text('hud-subtitle', r.subtitle); text('minimap-label', r.name.toUpperCase()); text('potion-count', String(quick ? s.items[quick] ?? 0 : 0)); text('hud-xp', s.xp + ' / ' + xpForLevel(s.level) + ' XP · Level ' + s.level);
+    document.getElementById('game-screen')?.classList.toggle('low-health', s.hp <= stats.maxHp * .3);
     document.getElementById('hp-fill')!.style.width = s.hp / stats.maxHp * 100 + '%'; document.getElementById('mp-fill')!.style.width = s.mana / stats.maxMana * 100 + '%';
     document.querySelector('#skill-button')!.setAttribute('aria-label', s.discipline === 'warden' ? 'Sunbreak skill' : s.discipline === 'ranger' ? 'Thorn Volley skill' : 'Memory Nova skill');
     document.querySelector('[data-action="quests"]')?.classList.toggle('reward-ready',SIDE_QUESTS.some(q=>s.quests[q.id]?.status==='ready'));
+  }
+  /** The Heal button spends the cheapest supply that covers the current need. */
+  private quickConsumable(): string | null {
+    if (!this.store.state) return null;
+    const s = this.store.s, stats = statsFor(s), has = (id: string) => (s.items[id] ?? 0) > 0;
+    const missingHp = stats.maxHp - s.hp, missingMana = stats.maxMana - s.mana;
+    if (missingHp > 0) {
+      if (missingHp >= 100 && has('greater_potion')) return 'greater_potion';
+      if (has('potion')) return 'potion';
+      if (has('greater_potion')) return 'greater_potion';
+    }
+    if (missingMana > 0) {
+      if (missingMana >= 60 && has('greater_ether')) return 'greater_ether';
+      if (has('ether')) return 'ether';
+      if (has('greater_ether')) return 'greater_ether';
+    }
+    return null;
   }
   private worldHud(data: WorldHud) {
     if(this.store.state)this.monetization.policy.visit(this.store.s.region);
@@ -338,6 +364,7 @@ export class GameUI {
       const actions:Record<string,[string,string]>={npc:['Talk','hand'],chest:['Open','bag'],house:['Enter','arrow'],ward:['Restore','sun'],camp:['Rest','sun'],lore:['Read','journal'],event:['Help','hand'],ore:['Mine','shield'],herb:['Gather','feather'],memory:['Take','journal'],letter:['Take','journal'],cat:['Guide','hand'],bell:['Light','sun'],observatory:['Awaken','star']};
       const [label,image]=actions[o.kind]??['Use','hand'];document.querySelector('#interaction-name')!.textContent=label;document.querySelector('#interaction-icon')!.innerHTML=icon(image,26);interaction.setAttribute('aria-label',label+' '+o.name);interaction.dataset.kind=o.kind;
     }
+    document.getElementById('game-screen')?.classList.toggle('boss-active', !!data.boss);
     const boss=document.querySelector<HTMLElement>('#boss-hud')!;boss.hidden=!data.boss;
     if(data.boss){document.querySelector('#boss-name')!.textContent=data.boss.name;document.getElementById('boss-fill')!.style.width=data.boss.hp/data.boss.max*100+'%';document.querySelector('#boss-value')!.textContent=Math.ceil(data.boss.hp)+' / '+data.boss.max;}
     const guide=document.querySelector<HTMLElement>('#quest-compass')!;guide.hidden=!data.guidance||!!data.boss||!!data.reveal;

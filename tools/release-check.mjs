@@ -9,8 +9,8 @@ const execute = promisify(execFile);
 const sdk = process.env.ANDROID_HOME || path.join(process.env.LOCALAPPDATA, 'Android/Sdk');
 const jdkTool = name => process.env.JAVA_HOME ? path.join(process.env.JAVA_HOME, 'bin', name + '.exe') : name;
 const run = async (name, args) => (await execute(name, args, { timeout: 120000, maxBuffer: 16 * 1024 * 1024 })).stdout;
-const apk = path.resolve('releases/Eldervale-Android-v1.6.0.apk');
-const aab = path.resolve('releases/Eldervale-Play-v1.6.0.aab');
+const apk = path.resolve('releases/Eldervale-Android-v1.7.0.apk');
+const aab = path.resolve('releases/Eldervale-Play-v1.7.0.aab');
 const checks = [];
 const check = (label, condition) => { assert(condition, label); checks.push(label); console.log('PASS ' + label); };
 
@@ -19,7 +19,7 @@ check('Release APK signature verifies with APK Signature Scheme v2', /Verified u
 const bundleSignature = await run(jdkTool('jarsigner'), ['-verify', aab]);
 check('Play AAB signature verifies', /jar verified/.test(bundleSignature));
 const badging = await run(path.join(sdk, 'build-tools/36.0.0/aapt.exe'), ['dump', 'badging', apk]);
-check('Release package has the expected app ID and version', /name='com\.eldervale\.hollowsun'.*versionCode='8'.*versionName='1\.6\.0'/.test(badging));
+check('Release package has the expected app ID and version', /name='com\.eldervale\.hollowsun'.*versionCode='9'.*versionName='1\.7\.0'/.test(badging));
 check('Release targets API 36 with minimum API 24', /sdkVersion:'24'/.test(badging) && /targetSdkVersion:'36'/.test(badging));
 const manifest = await run(path.join(sdk, 'build-tools/36.0.0/aapt.exe'), ['dump', 'xmltree', apk, 'AndroidManifest.xml']);
 check('Release activity requests portrait orientation', /screenOrientation.*0x1/.test(manifest));
@@ -40,6 +40,6 @@ for (const filename of [apk, aab]) {
   const data = await readFile(filename);
   files.push({ file: path.basename(filename), bytes: data.length, sha256: createHash('sha256').update(data).digest('hex') });
 }
-await writeFile('releases/android-release-manifest.json', JSON.stringify({ version: '1.6.0', versionCode: 8, appId: 'com.eldervale.hollowsun',monetization:'Google test ads; live purchase product requires Play Console configuration',files }, null, 2));
+await writeFile('releases/android-release-manifest.json', JSON.stringify({ version: '1.7.0', versionCode: 9, appId: 'com.eldervale.hollowsun',monetization:'Google test ads; live purchase product requires Play Console configuration',files }, null, 2));
 await writeFile('test-results/android-release-report.json', JSON.stringify({ checks, files }, null, 2));
 console.log(checks.length + ' release checks passed.');

@@ -31,7 +31,7 @@ $taskReleaseDir = Join-Path $taskRoot 'releases'
 [IO.Directory]::CreateDirectory($taskReleaseDir) | Out-Null
 Copy-Item -LiteralPath (Join-Path $taskAndroid 'app\build\outputs\apk\debug\app-debug.apk') -Destination (Join-Path $taskReleaseDir 'Eldervale-Android-debug.apk') -Force
 if (!$SkipRelease) {
-    Copy-Item -LiteralPath (Join-Path $taskAndroid 'app\build\outputs\apk\release\app-release.apk') -Destination (Join-Path $taskReleaseDir 'Eldervale-Android-v1.6.0.apk') -Force
-    Copy-Item -LiteralPath (Join-Path $taskAndroid 'app\build\outputs\bundle\release\app-release.aab') -Destination (Join-Path $taskReleaseDir 'Eldervale-Play-v1.6.0.aab') -Force
+    Copy-Item -LiteralPath (Join-Path $taskAndroid 'app\build\outputs\apk\release\app-release.apk') -Destination (Join-Path $taskReleaseDir 'Eldervale-Android-v1.7.0.apk') -Force
+    Copy-Item -LiteralPath (Join-Path $taskAndroid 'app\build\outputs\bundle\release\app-release.aab') -Destination (Join-Path $taskReleaseDir 'Eldervale-Play-v1.7.0.aab') -Force
 }
 Get-ChildItem -LiteralPath $taskReleaseDir -File | Where-Object { $_.Extension -in @('.apk', '.aab') } | Select-Object Name, Length

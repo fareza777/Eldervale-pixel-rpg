@@ -9,10 +9,10 @@ what the next dawn will cost.
 
 ## Android
 
-Install **releases/Eldervale-Android-v1.6.0.apk** on an Android phone.
+Install **releases/Eldervale-Android-v1.7.0.apk** on an Android phone.
 The game includes its assets and works offline from the first launch.
-**releases/Eldervale-Play-v1.6.0.aab** is the signed Google Play upload bundle.
-Both builds use app ID `com.eldervale.hollowsun`, version 1.6.0 / code 8.
+**releases/Eldervale-Play-v1.7.0.aab** is the signed Google Play upload bundle.
+Both builds use app ID `com.eldervale.hollowsun`, version 1.7.0 / code 9.
 
 Native AdMob uses official Google test IDs for menu banners, natural-break
 interstitials and optional rewarded supplies. Remove Ads is a one-time US$4.99
@@ -79,6 +79,8 @@ remain. Discover towns on foot to unlock fast travel.
 - Smooth, slower walking and running with acceleration and brief braking.
 - A full-screen Android world, collapsed menu shortcuts and high-density pixel rendering.
 - Smooth camera following, native animation impact timing, sword arcs, recoil and swept arrow hits.
+- Scaled guardians, readable attack windups, and a Heal button that spends elixirs and ether.
+- Lantern-lit interiors and dungeons, drifting biome motes and a damage-reactive vignette.
 - Authored gardens, quays, chamber inlays, raised dungeon walls and quiet water reflections.
 - Four new transparent architectural landmarks reused across the world.
 - A compact quest compass without a dotted ground trail.
