@@ -1,0 +1,105 @@
+{
+  "title": "Eldervale — The Hollow Sun",
+  "language": "en-US",
+  "gameVersion": "1.6.0",
+  "icon": {
+    "file": "app-icon-512.png",
+    "width": 512,
+    "height": 512,
+    "alt": "Fractured golden Hollow Sun surrounding a luminous memory crystal."
+  },
+  "featureGraphic": {
+    "file": "feature-graphic-1024x500.png",
+    "width": 1024,
+    "height": 500,
+    "alt": "A hooded traveler approaches a distant city beneath the fractured Hollow Sun."
+  },
+  "screenshots": [
+    {
+      "order": 1,
+      "file": "screenshot-01-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "A world worth remembering",
+      "alt": "Arin explores Elderbrook beneath the lantern well."
+    },
+    {
+      "order": 2,
+      "file": "screenshot-02-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "Make every strike count",
+      "alt": "Arin strikes enemies in Whispering Wilds."
+    },
+    {
+      "order": 3,
+      "file": "screenshot-03-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "Shape your strength",
+      "alt": "Character talents with ranks and available upgrade points."
+    },
+    {
+      "order": 4,
+      "file": "screenshot-04-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "Follow the light. Face the dark.",
+      "alt": "The Inkbound Galleries, with bookshelves, pillars and enemies."
+    },
+    {
+      "order": 5,
+      "file": "screenshot-05-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "Take the longer road",
+      "alt": "Exploration through the snowy town of Frosthaven."
+    },
+    {
+      "order": 6,
+      "file": "screenshot-06-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "She was real. Prove it.",
+      "alt": "Masked record keeper Mara reveals that Lyra was real."
+    },
+    {
+      "order": 7,
+      "file": "screenshot-07-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "Find your next advantage",
+      "alt": "Inventory containing weapons, equipment and supplies."
+    },
+    {
+      "order": 8,
+      "file": "screenshot-08-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "headline": "Beyond the main quest",
+      "alt": "The side-quest journal with people and stories to discover."
+    }
+  ],
+  "videos": [
+    {
+      "file": "eldervale-landscape-1080p.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "seconds": 40
+    },
+    {
+      "file": "eldervale-portrait-1080p.mp4",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "seconds": 40
+    }
+  ],
+  "audio": "English ElevenLabs George narration; nature ambience and Foley; no instrumental music.",
+  "publication": "Local deliverables only. Upload the landscape MP4 to YouTube, then add its URL in Play Console. No availability claims are included.",
+  "sources": [
+    "https://support.google.com/googleplay/android-developer/answer/9866151?hl=en",
+    "https://developer.android.com/distribute/google-play/resources/icon-design-specifications"
+  ]
+}

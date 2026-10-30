@@ -1,0 +1,66 @@
+{
+  "startedAt": "2026-10-06T06:13:18.343Z",
+  "viewport": {
+    "width": 432,
+    "height": 768
+  },
+  "pixelRatio": 2,
+  "clips": [
+    {
+      "name": "town",
+      "from": 10.084,
+      "duration": 4.647
+    },
+    {
+      "name": "dialogue",
+      "from": 15.668,
+      "duration": 4.214000000000002
+    },
+    {
+      "name": "talents",
+      "from": 24.047,
+      "duration": 3.5120000000000005
+    },
+    {
+      "name": "inventory",
+      "from": 28.337,
+      "duration": 4.017999999999997
+    },
+    {
+      "name": "frost",
+      "from": 37.2,
+      "duration": 3.6239999999999952
+    },
+    {
+      "name": "dungeon",
+      "from": 44.221,
+      "duration": 4.521000000000001
+    },
+    {
+      "name": "river",
+      "from": 52.241,
+      "duration": 3.3149999999999977
+    },
+    {
+      "name": "combat",
+      "from": 58.977,
+      "duration": 6.080000000000005
+    },
+    {
+      "name": "magic",
+      "from": 68.724,
+      "duration": 4.063000000000002
+    },
+    {
+      "name": "interior",
+      "from": 76.157,
+      "duration": 3.112000000000009
+    }
+  ],
+  "errors": [],
+  "meta": {
+    "title": "Eldervale — The Hollow Sun",
+    "region": "elder_inn"
+  },
+  "notes": "Isolated QA save. Existing character, item, talent and quest definitions only. Real world rendering and combat. No player saves altered."
+}

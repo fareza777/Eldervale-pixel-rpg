@@ -1,0 +1,27 @@
+{
+  "source": "Built-in imagegen tool",
+  "sourceImage": "public/assets/art/interior-furniture-crisp.png",
+  "packedImage": "public/assets/pack/furniture.png",
+  "prompt": "Use case: style-transfer. Edit target: the provided interior furniture atlas. Rebuild the same 16 furniture designs, in exactly the same precise 4 by 4 grid and row-major order, as clean production pixel-art sprites for a premium 2D top-down fantasy RPG. Row 1: burgundy oak single bed, dining table with runner and two plates and candle, burgundy chair, tall bookcase. Row 2: stone fireplace, alchemy workbench with a few clear bottles, steel anvil on stump, stone forge. Row 3: wooden merchant counter, flat burgundy rectangular rug, two-door wardrobe, kitchen shelves with pots. Row 4: small round table with lantern, writing desk with quill and a sheet, wooden bathtub, grandfather clock. Preserve the same front/top-down three-quarter orthographic viewpoint, object proportions, subdued aged oak / antique brass / burgundy / warm slate palette, no people or animals. CRITICAL STYLE: readable low-noise pixel art built from LARGE CONTIGUOUS FLAT COLOR CLUSTERS, clean crisp outlines and stepped edges, consistent pixel grid, four clear shade levels per material, simple deliberate highlights. Each furniture design should remain clearly readable when packed at about 80 to 120 pixels in height. Remove speckled grain, dithering, hairline scrollwork, tiny meaningless ornaments, photographic texture, gradients, bloom and semitransparent fuzzy pixels. Strong well-separated silhouettes and visibly clear table/chair legs. All 16 objects fully contained in separate equal cells with generous transparent empty gutters; no object or shadow may touch another cell. Do NOT draw floating/cast shadows; the engine will add floor contact shadows. Real transparent RGBA background, no colored backdrop, no floor squares, no text, no UI, no watermark, no uncovered faces. An elegant handcrafted JRPG pixel-art production atlas, sharper and simpler than the reference.",
+  "frames": [
+    "bed",
+    "dining_table",
+    "chair",
+    "bookcase",
+    "fireplace",
+    "alchemy_table",
+    "anvil",
+    "forge",
+    "counter",
+    "rug",
+    "wardrobe",
+    "kitchen_shelf",
+    "round_table",
+    "writing_desk",
+    "bath",
+    "clock"
+  ],
+  "packaging": "Opaque component crop, nearest-neighbor sizing at twice the world resolution, binary alpha and half-scale runtime sprites; original generation retained.",
+  "referenceImage": "public/assets/art/interior-furniture-source.png",
+  "pixelDensity": 2
+}

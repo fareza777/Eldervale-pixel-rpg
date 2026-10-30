@@ -1,0 +1,52 @@
+{
+  "provider": "ElevenLabs",
+  "voice": "George",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "language": "en",
+  "music": false,
+  "clips": [
+    {
+      "id": "01-hook",
+      "text": "Tomorrow... will you remember her?",
+      "file": "marketing/remotion/public/audio/01-hook.mp3",
+      "bytes": 59372
+    },
+    {
+      "id": "02-sister",
+      "text": "The world forgot your sister. You will not.",
+      "file": "marketing/remotion/public/audio/02-sister.mp3",
+      "bytes": 66284
+    },
+    {
+      "id": "03-world",
+      "text": "Follow forgotten roads. Find the light they left behind.",
+      "file": "marketing/remotion/public/audio/03-world.mp3",
+      "bytes": 84140
+    },
+    {
+      "id": "04-combat",
+      "text": "Fight for every memory.",
+      "file": "marketing/remotion/public/audio/04-combat.mp3",
+      "bytes": 36908
+    },
+    {
+      "id": "05-build",
+      "text": "Shape your strength. Uncover what the dawn erased.",
+      "file": "marketing/remotion/public/audio/05-build.mp3",
+      "bytes": 79532
+    },
+    {
+      "id": "06-choice",
+      "text": "And decide what the next dawn will cost.",
+      "file": "marketing/remotion/public/audio/06-choice.mp3",
+      "bytes": 55916
+    },
+    {
+      "id": "07-title",
+      "text": "Eldervale. The Hollow Sun.",
+      "file": "marketing/remotion/public/audio/07-title.mp3",
+      "bytes": 50732
+    }
+  ]
+}

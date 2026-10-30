@@ -1,0 +1,40 @@
+{
+  "resolution": [
+    864,
+    1536
+  ],
+  "fps": 30,
+  "framesPerClip": 120,
+  "method": "Actual Phaser simulation advanced in fixed 33.333 ms steps, with a full-page screenshot after every rendered frame. Inputs call the existing movement, attack, dodge and skill methods. No UI or hit effects are fabricated.",
+  "scenes": [
+    {
+      "clip": "town",
+      "region": "elderbrook"
+    },
+    {
+      "clip": "frost",
+      "region": "frosthaven"
+    },
+    {
+      "clip": "river",
+      "region": "tidecross"
+    },
+    {
+      "clip": "combat",
+      "region": "wilds"
+    },
+    {
+      "clip": "magic",
+      "region": "wilds"
+    },
+    {
+      "clip": "dungeon",
+      "region": "archive_halls"
+    },
+    {
+      "clip": "interior",
+      "region": "elder_inn"
+    }
+  ],
+  "errors": []
+}

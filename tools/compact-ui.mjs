@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+let ui = readFileSync('src/ui.ts','utf8');
+ui = ui.replace('<img src="/assets/legacy/portraits/${n.portrait}.png" alt="${n.name}"/>', '${this.portrait(n.portrait, n.name)}');
+ui = ui.replace('    const item = ITEMS[this.selectedItem]', '    this.inventoryPage = Math.max(0, Math.min(Math.ceil(available.length / 8) - 1, this.inventoryPage));\n    const visible = available.slice(this.inventoryPage * 8, this.inventoryPage * 8 + 8);\n    const item = ITEMS[this.selectedItem]');
+ui = ui.replace('available.map(([id, count])', 'visible.map(([id, count])');
+ui = ui.replace('<div class="inventory-summary">', "${this.pages('inventory-page', this.inventoryPage, Math.ceil(available.length / 8))}<div class=\"inventory-summary\">");
+ui = ui.replace('  private codex() {\n', "  private codex() {\n    const entries = Object.values(ENEMIES), pageCount = Math.ceil(entries.length / 4);\n    this.codexPage = Math.max(0, Math.min(pageCount - 1, this.codexPage));\n");
+ui = ui.replace('Object.values(ENEMIES).map(e =>', 'entries.slice(this.codexPage * 4, this.codexPage * 4 + 4).map(e =>');
+ui = ui.replace(".join('')}</div>\x60, true);\n  }\n  private talk", ".join('')}</div>${this.pages('codex-page', this.codexPage, pageCount)}\x60, true);\n  }\n  private talk");
+ui = ui.replace('  private shop(service: string) {', '  private shop(service: string) {\n    this.shopService = service;');
+ui = ui.replace("    this.openModal('shop',", "    const pageCount = Math.ceil((service === 'shop' ? offers : recipes).length / 3);\n    this.shopPage = Math.max(0, Math.min(pageCount - 1, this.shopPage));\n    this.openModal('shop',");
+ui = ui.replace('offers.map(id =>', 'offers.slice(this.shopPage * 3, this.shopPage * 3 + 3).map(id =>');
+ui = ui.replace('recipes.map(r =>', 'recipes.slice(this.shopPage * 3, this.shopPage * 3 + 3).map(r =>');
+ui = ui.replace('</div><button class="quiet-button" data-action="inventory">Open inventory', '</div>${this.pages(\'shop-page\', this.shopPage, pageCount)}<button class="quiet-button" data-action="inventory">Open inventory');
+writeFileSync('src/ui.ts',ui);

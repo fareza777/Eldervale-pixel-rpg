@@ -1,0 +1,448 @@
+{
+  "model": "eleven_multilingual_v2",
+  "cast": {
+    "narrator": {
+      "id": "JBFqnCBsd6RMkjVDRZzb",
+      "name": "George",
+      "settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.78,
+        "style": 0.16,
+        "use_speaker_boost": true,
+        "speed": 0.96
+      }
+    },
+    "hero": {
+      "id": "cjVigY5qzO86Huf0OWal",
+      "name": "Eric",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0.12,
+        "use_speaker_boost": true,
+        "speed": 1.03
+      }
+    },
+    "lyra": {
+      "id": "pFZP5JQG7iQjIQuC4Bku",
+      "name": "Lily",
+      "settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.8,
+        "style": 0.17,
+        "use_speaker_boost": true,
+        "speed": 0.98
+      }
+    },
+    "keeper": {
+      "id": "Xb7hH8MSUJpSbSDYk0k2",
+      "name": "Alice",
+      "settings": {
+        "stability": 0.63,
+        "similarity_boost": 0.78,
+        "style": 0.1,
+        "use_speaker_boost": true,
+        "speed": 1
+      }
+    },
+    "elder": {
+      "id": "pqHfZKP75CvOlQylNhV4",
+      "name": "Bill",
+      "settings": {
+        "stability": 0.63,
+        "similarity_boost": 0.78,
+        "style": 0.12,
+        "use_speaker_boost": true,
+        "speed": 1
+      }
+    },
+    "gentle": {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "settings": {
+        "stability": 0.63,
+        "similarity_boost": 0.78,
+        "style": 0.08,
+        "use_speaker_boost": true,
+        "speed": 1
+      }
+    }
+  },
+  "clips": [
+    {
+      "id": "intro_0",
+      "text": "Every morning, you set out two cups. Three dawns ago, the world forgot your sister. Today, you almost forgot why the second cup was there.",
+      "cast": "narrator"
+    },
+    {
+      "id": "intro_1",
+      "text": "For a hundred years, the Hollow Sun has kept the dark away. Each dawn takes a memory. The Council calls it a small price for peace.",
+      "cast": "narrator"
+    },
+    {
+      "id": "intro_2",
+      "text": "But one page survived. One name refused to disappear. Lyra. Follow her lantern, and discover what the dawn was never meant to reveal.",
+      "cast": "narrator"
+    },
+    {
+      "id": "intro_3",
+      "text": "If you find me, bring no grand sacrifice. Bring the people we would be leaving behind. And whatever they tell you, do not trust a perfect dawn.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_mara_0",
+      "text": "Keep your voice low. The Council says you never had a sister. This page says otherwise. Lyra was real.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_mara_1",
+      "text": "Her lantern remembers the road. Follow it north, through the old orchard. Someone scratched a name beneath its handle. Do not let them take it.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_mara_return_0",
+      "text": "You found my signature in the archive. Yes. I helped choose the names the dawn would take.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_mara_return_1",
+      "text": "I thought I was saving this village. Then they asked for Lyra. I kept the page, but I did not stop them. You have every right to hate me.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_mara_return_2",
+      "text": "The sun is not choosing at random. Someone is feeding it witnesses. Finish what I was too afraid to begin.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_nessa_0",
+      "text": "He still makes two cups of tea. He cannot remember why, but he knows one of them must stay warm.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_nessa_1",
+      "text": "Moonbloom eases the ache after a lost memory. Bring me a few flowers from the Wilds. We cannot give every name back yet. We can make this morning kinder.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_garrick_0",
+      "text": "The Council closed the northern road. I keep it open after dusk. Some orders do not deserve to be obeyed.",
+      "cast": "hero"
+    },
+    {
+      "id": "dialogue_garrick_1",
+      "text": "Read the red marks. Dodge, then strike. Clear the creatures from the road, and I can bring our travelers home.",
+      "cast": "hero"
+    },
+    {
+      "id": "dialogue_tavi_0",
+      "text": "Miso has a red ribbon on his tail. I tied it there so I would know him, even if the sun took his name. Please bring him home.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_pip_0",
+      "text": "Two spare bandages and something warm. A good pack brings you home. What do you need?",
+      "cast": "hero"
+    },
+    {
+      "id": "dialogue_brann_0",
+      "text": "I forged the Council's seals. I thought they kept the sun alive. Now I wonder what they kept locked inside.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_brann_1",
+      "text": "Bring three Stariron Ore and two Memory Crystals. I cannot undo my work. I can make you something strong enough to break it.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_orrin_0",
+      "text": "Lyra did not flee the Council. She went looking for the people they had erased. I hid her letter before the inspectors came.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_orrin_1",
+      "text": "Cross the Mire into the Inkbound Galleries. The witness records will open the drowned archive. If the water speaks with a familiar voice, ask it your name.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_orrin_return_0",
+      "text": "The list you found is not a record of the missing. It is a schedule. Each name was chosen before the dawn.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_orrin_return_1",
+      "text": "I kept my lighthouse burning for the ships. Now I keep it burning for the people the city pretends were never aboard.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_selene_0",
+      "text": "My father's beacon still burns below the archive. He kept it lit for every boat, even when there was no one left to remember him.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_selene_1",
+      "text": "Release the wraiths, then light his lantern. I do not need him to come back. I need the city to know he was here.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_tide_merchant_0",
+      "text": "Name bracelets sell better than gold here. I would give up a fortune to stop making them.",
+      "cast": "hero"
+    },
+    {
+      "id": "dialogue_ivo_0",
+      "text": "The false sun drowns out the stars. It never destroyed them. The old observatories can prove it.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_ivo_1",
+      "text": "Awaken all three. If someone tells you there is nothing beyond their light, look harder.",
+      "cast": "keeper"
+    },
+    {
+      "id": "dialogue_elara_0",
+      "text": "Lyra came here willingly. She offered the sun her memories so it would stop taking ours.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_elara_1",
+      "text": "Then she learned the seals do more than feed it. They decide which memories survive. The Council has been choosing its own history.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_elara_2",
+      "text": "Her last memory is beneath Frostglass Vault. Go gently. It is the one she could not bear to lose.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_elara_return_0",
+      "text": "The promise you found was yours. You asked to forget the path, so the Council could never take it from you.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_elara_return_1",
+      "text": "Lyra left her name inside your lantern. She trusted that even without the memory, you would choose to find her again.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_north_merchant_0",
+      "text": "Warm your hands. The road ahead is long, and there is no glory in an empty pack.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_lyra_0",
+      "text": "You found me. I hoped you would. I was afraid you would.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_lyra_1",
+      "text": "You chose to forget our plan so they could not steal it from you. I hid my name in the lantern. I had to trust you would follow it.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_lyra_2",
+      "text": "The King was never their ruler. He is everyone they erased, holding one another together. You opened his cage.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_lyra_3",
+      "text": "We can break the sun, carry its burden, or share its light. This time, no one chooses for us.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_lyra_home_0",
+      "text": "There is still a place for us at that table. Whatever comes next, we will face it together.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_doran_0",
+      "text": "A nameplate is a promise made in copper. The miners kept making them after the Council ordered silence.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_doran_1",
+      "text": "East of Copperleaf Trail, the Ember Quarry holds their last delivery. Restore its wards. Bring those names home.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_aster_0",
+      "text": "The Council's records say these children never existed. Our lake keeps a different ledger.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_aster_1",
+      "text": "Reach the Moonwell through Mistflower Banks. Its witness lamps protect the last page. A city is more than the history its rulers allow.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_rowan_0",
+      "text": "No one surrenders a name here. We take turns keeping the fire. That is how a refuge survives.",
+      "cast": "hero"
+    },
+    {
+      "id": "dialogue_rowan_1",
+      "text": "The Nightwatch Crypt lies east of the Northern Watchroad. Its stores could carry us through winter. Its lantern still remembers the pilgrims.",
+      "cast": "hero"
+    },
+    {
+      "id": "dialogue_house_inn_0",
+      "text": "A warm hearth and a place to rest. Leave the road at the door. You are welcome here.",
+      "cast": "lyra"
+    },
+    {
+      "id": "dialogue_house_smith_0",
+      "text": "Good equipment brings you home. Let us make something that lasts.",
+      "cast": "elder"
+    },
+    {
+      "id": "dialogue_house_shop_0",
+      "text": "Supplies for the next road. Take your time.",
+      "cast": "gentle"
+    },
+    {
+      "id": "dialogue_house_alchemy_0",
+      "text": "A little care goes a long way. What shall we brew?",
+      "cast": "gentle"
+    },
+    {
+      "id": "chronicle_0_0",
+      "text": "Mara kept a forbidden page. Beneath your lantern's handle is a name the dawn could not swallow. The first trail leads north, beyond the old orchard.",
+      "cast": "narrator"
+    },
+    {
+      "id": "chronicle_1_0",
+      "text": "The Rootwarden traded his daughter's name for one more morning. His orchard kept count of every birthday he forgot. Peace was never as cheap as the Council promised.",
+      "cast": "narrator"
+    },
+    {
+      "id": "chronicle_2_0",
+      "text": "The drowned records were not accidents. They were orders. Mara's signature chose the names. But beside Lyra's is an empty line, written in your own hand.",
+      "cast": "narrator"
+    },
+    {
+      "id": "chronicle_3_0",
+      "text": "You chose to forget the path that led to Lyra, so the Council could not steal it. She hid her name in the lantern, and waited for you to choose her a second time.",
+      "cast": "narrator"
+    },
+    {
+      "id": "chronicle_4_0",
+      "text": "The Hollow King was everyone the Council erased, holding one another together inside the cage. The battle was a release. Now the door behind the dawn stands open.",
+      "cast": "narrator"
+    },
+    {
+      "id": "chronicle_5_0",
+      "text": "A perfect dawn demanded obedience. A human dawn asks what we are willing to carry together. The names you saved will remember the choice you made.",
+      "cast": "narrator"
+    },
+    {
+      "id": "memory_sanctuary_0",
+      "text": "They told me a name was a small price for peace. When the sun took hers, I still remembered being a father. I just had no one left to love.",
+      "cast": "elder"
+    },
+    {
+      "id": "memory_sanctuary_1",
+      "text": "Please tell her I kept the lantern lit. I planted a tree for every birthday. The orchard will remember for both of us.",
+      "cast": "elder"
+    },
+    {
+      "id": "memory_archive_0",
+      "text": "We built the sun from a captive star-eater. We did not end its hunger. We taught it to eat memories, and hid the cost behind a golden dawn.",
+      "cast": "keeper"
+    },
+    {
+      "id": "memory_archive_1",
+      "text": "The witness list bears Mara's signature. Beside Lyra's name, an empty line in your handwriting: erase the way, never the promise.",
+      "cast": "keeper"
+    },
+    {
+      "id": "memory_vault_0",
+      "text": "You asked to forget our plan. If they took you, they would find no road to me. I hid my name in the lantern and prayed your heart would find the way.",
+      "cast": "lyra"
+    },
+    {
+      "id": "memory_vault_1",
+      "text": "If you find me, bring no grand sacrifice. Bring the people we would be leaving behind. Keep the people, not the prison.",
+      "cast": "lyra"
+    },
+    {
+      "id": "skill_warden_0",
+      "text": "Stay behind me.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_warden_1",
+      "text": "Hold the line.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_warden_2",
+      "text": "I will not yield.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_ranger_0",
+      "text": "One clear shot.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_ranger_1",
+      "text": "Keep moving.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_ranger_2",
+      "text": "I've got you.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_arcanist_0",
+      "text": "I remember.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_arcanist_1",
+      "text": "Let the silence break.",
+      "cast": "hero"
+    },
+    {
+      "id": "skill_arcanist_2",
+      "text": "Come back to us.",
+      "cast": "hero"
+    },
+    {
+      "id": "ending_remember_0",
+      "text": "You shatter the false sun. Night falls. For the first time, no one loses a name when morning comes. Lyra takes your hand. Above Frosthaven, a thousand stars wait to be seen. Life will be harder. At last, it belongs to them.",
+      "cast": "narrator"
+    },
+    {
+      "id": "ending_sacrifice_0",
+      "text": "You take my place. The dawn grows warm, and no one forgets again, because you carry every loss. I write your name each morning. At Elderbrook's gate, a lantern waits for someone who promised to come home.",
+      "cast": "lyra"
+    },
+    {
+      "id": "ending_share_0",
+      "text": "The people you helped answer your lantern with their own. No single life must bear the dawn. Every home holds a little light, every name is kept together. Lyra comes home. For the first time, morning is given freely.",
+      "cast": "narrator"
+    },
+    {
+      "id": "reveal_rootwarden_0",
+      "text": "I planted a tree for every year. Tell me why I cannot remember her name.",
+      "cast": "elder"
+    },
+    {
+      "id": "reveal_archivist_0",
+      "text": "We were not lost. They wrote us out. Let the water speak.",
+      "cast": "keeper"
+    },
+    {
+      "id": "reveal_glasskeeper_0",
+      "text": "Erase the way. Never the promise.",
+      "cast": "lyra"
+    },
+    {
+      "id": "reveal_hollowking_0",
+      "text": "We are every name they took. Open the door.",
+      "cast": "narrator"
+    }
+  ]
+}

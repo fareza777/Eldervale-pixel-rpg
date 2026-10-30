@@ -1,0 +1,78 @@
+{
+  "images": [
+    {
+      "src": "app-icon-512.png",
+      "loaded": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "src": "feature-graphic-1024x500.png",
+      "loaded": true,
+      "width": 1024,
+      "height": 500
+    },
+    {
+      "src": "screenshot-01-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-02-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-03-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-04-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-05-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-06-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-07-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "screenshot-08-1080x1920.png",
+      "loaded": true,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "app-icon-512.png",
+      "loaded": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "src": "feature-graphic-1024x500.png",
+      "loaded": true,
+      "width": 1024,
+      "height": 500
+    }
+  ],
+  "tabs": "pass",
+  "mobileOverflow": false
+}

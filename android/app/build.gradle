@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+def signingValues = new Properties()
+def signingFile = rootProject.file('signing.properties')
+if (signingFile.exists()) signingFile.withInputStream { signingValues.load(it) }
+def monetizationValues = new Properties()
+rootProject.file('monetization.properties').withInputStream { monetizationValues.load(it) }
+def testAds = monetizationValues.getProperty('mode', 'test') == 'test'
+def demoPublisher = 'ca-app-pub-3940256099942544'
+if (testAds && !['admobAppId','bannerId','interstitialId','rewardedId'].every { monetizationValues.getProperty(it, '').startsWith(demoPublisher) }) {
+    throw new GradleException('Test builds require official Google demo ad IDs.')
+}
+if (!testAds && (!monetizationValues.getProperty('playBillingPublicKey', '').trim() || ['admobAppId','bannerId','interstitialId','rewardedId'].any { monetizationValues.getProperty(it, '').startsWith(demoPublisher) })) {
+    throw new GradleException('Live monetization requires publisher IDs and the Play Billing public key.')
+}
+
+android {
+    namespace = "com.eldervale.hollowsun"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.eldervale.hollowsun"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 8
+        versionName "1.6.0"
+        resValue 'string', 'admob_app_id', monetizationValues.getProperty('admobAppId')
+        resValue 'string', 'admob_banner_id', monetizationValues.getProperty('bannerId')
+        resValue 'string', 'admob_interstitial_id', monetizationValues.getProperty('interstitialId')
+        resValue 'string', 'admob_rewarded_id', monetizationValues.getProperty('rewardedId')
+        resValue 'string', 'remove_ads_product_id', monetizationValues.getProperty('removeAdsProductId', 'remove_ads')
+        resValue 'string', 'play_billing_public_key', monetizationValues.getProperty('playBillingPublicKey', '')
+        resValue 'bool', 'monetization_test_mode', testAds.toString()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    signingConfigs {
+        if (signingFile.exists()) {
+            upload {
+                storeFile rootProject.file(signingValues['storeFile'])
+                storePassword signingValues['storePassword']
+                keyAlias signingValues['keyAlias']
+                keyPassword signingValues['keyPassword']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            if (signingFile.exists()) signingConfig signingConfigs.upload
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads:25.5.0'
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+    implementation 'com.android.billingclient:billing:9.1.0'
+    implementation 'com.google.android.play:review:2.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}

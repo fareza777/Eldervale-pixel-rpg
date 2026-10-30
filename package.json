@@ -1,0 +1,50 @@
+{
+  "name": "eldervale-the-hollow-sun",
+  "version": "1.6.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5174",
+    "build": "tsc --noEmit && vite build && node tools/precache.mjs",
+    "dev:qa": "vite --host 127.0.0.1 --port 5175 --mode qa",
+    "preview": "vite preview --host 0.0.0.0 --port 4174",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "node tools/verify.mjs",
+    "test:mobile": "node tools/mobile-check.mjs",
+    "test:android": "node tools/android-check.mjs",
+    "test:release": "node tools/release-check.mjs",
+    "test:rendering": "node tools/rendering-check.mjs",
+    "test:residents": "node tools/residents-check.mjs",
+    "test:monetization": "node tools/monetization-check.mjs",
+    "test:run-combat": "node tools/run-combat-check.mjs",
+    "test:android-ads": "node tools/android-ads-check.mjs",
+    "android:sync": "npm run build && cap sync android",
+    "android:build": "npm run android:sync && powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-android.ps1"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/filesystem": "8.1.4",
+    "@capacitor/haptics": "8.0.2",
+    "@capacitor/preferences": "8.0.1",
+    "@capacitor/share": "8.0.3",
+    "@capacitor/splash-screen": "8.0.2",
+    "gsap": "3.13.0",
+    "phaser": "3.90.0"
+  },
+  "overrides": {
+    "xcode": {
+      "uuid": "11.1.1"
+    }
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "@types/node": "^24.0.0",
+    "playwright-core": "1.63.0",
+    "typescript": "~5.9.3",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  }
+}

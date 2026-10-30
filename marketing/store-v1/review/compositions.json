@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Eldervale-Landscape",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 1200
+  },
+  {
+    "id": "Eldervale-Portrait",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationInFrames": 1200
+  },
+  {
+    "id": "App-Icon",
+    "width": 512,
+    "height": 512,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Feature-Graphic",
+    "width": 1024,
+    "height": 500,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-01",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-02",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-03",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-04",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-05",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-06",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-07",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Screenshot-08",
+    "width": 1080,
+    "height": 1920,
+    "fps": 1,
+    "durationInFrames": 1
+  },
+  {
+    "id": "Opening",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 120
+  },
+  {
+    "id": "Sister",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 120
+  },
+  {
+    "id": "Exploration",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 180
+  },
+  {
+    "id": "Combat",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 180
+  },
+  {
+    "id": "Hero-Build",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 150
+  },
+  {
+    "id": "Discovery",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 180
+  },
+  {
+    "id": "Story",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 120
+  },
+  {
+    "id": "Closing",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 150
+  }
+]

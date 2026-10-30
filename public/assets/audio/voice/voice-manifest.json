@@ -1,0 +1,683 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "music": false,
+  "instrumentals": false,
+  "clips": {
+    "intro_0": {
+      "text": "Every morning, you set out two cups. Three dawns ago, the world forgot your sister. Today, you almost forgot why the second cup was there.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "intro_0.mp3",
+      "hash": "e9e4270083bd466abe46a8594dcb7a0ef2b8b46f21025000de50f32e83be117f",
+      "bytes": 134207
+    },
+    "intro_1": {
+      "text": "For a hundred years, the Hollow Sun has kept the dark away. Each dawn takes a memory. The Council calls it a small price for peace.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "intro_1.mp3",
+      "hash": "34995a690d2ea327bac9232b559fa99e895f7416d586e811bf5a89b7348a7976",
+      "bytes": 128774
+    },
+    "intro_2": {
+      "text": "But one page survived. One name refused to disappear. Lyra. Follow her lantern, and discover what the dawn was never meant to reveal.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "intro_2.mp3",
+      "hash": "0517633f7636c4940fbf8b055a253895c9d4880841c96e8fdc3be73486093803",
+      "bytes": 135461
+    },
+    "intro_3": {
+      "text": "If you find me, bring no grand sacrifice. Bring the people we would be leaving behind. And whatever they tell you, do not trust a perfect dawn.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "intro_3.mp3",
+      "hash": "84e0ad53e91fd3cb5f7284a16db806a2f7b2fadf70a918a8c3ccb980dc39fa57",
+      "bytes": 161375
+    },
+    "dialogue_mara_0": {
+      "text": "Keep your voice low. The Council says you never had a sister. This page says otherwise. Lyra was real.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_mara_0.mp3",
+      "hash": "3c2686596d8b4dbbb83e0d7b9b84bf95380dc82173f1c5bb502895c25b78f927",
+      "bytes": 103696
+    },
+    "dialogue_mara_1": {
+      "text": "Her lantern remembers the road. Follow it north, through the old orchard. Someone scratched a name beneath its handle. Do not let them take it.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_mara_1.mp3",
+      "hash": "1ccd6fa5393963b51a74abf76660dd64982176c9e9ed90d686bc7d28561622e4",
+      "bytes": 152598
+    },
+    "dialogue_mara_return_0": {
+      "text": "You found my signature in the archive. Yes. I helped choose the names the dawn would take.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_mara_return_0.mp3",
+      "hash": "5d5850c636aadb8c5aa623fa7f18b7fc5de445800b8fb99dc4e5c80cce8e95db",
+      "bytes": 83634
+    },
+    "dialogue_mara_return_1": {
+      "text": "I thought I was saving this village. Then they asked for Lyra. I kept the page, but I did not stop them. You have every right to hate me.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_mara_return_1.mp3",
+      "hash": "bebb68e996b538aa393e63402d6db4274b3ff4c9557a6a46bbaa7454460cb673",
+      "bytes": 134625
+    },
+    "dialogue_mara_return_2": {
+      "text": "The sun is not choosing at random. Someone is feeding it witnesses. Finish what I was too afraid to begin.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_mara_return_2.mp3",
+      "hash": "4da4659c13c8bebf25026ef68fccea39d1e8b816ef94d63ae06082f3d9f6e3cd",
+      "bytes": 104532
+    },
+    "dialogue_nessa_0": {
+      "text": "He still makes two cups of tea. He cannot remember why, but he knows one of them must stay warm.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_nessa_0.mp3",
+      "hash": "63b6858a038809ca29c82184d3f272bc842dd907065dd7e9a76ab4737e1b3913",
+      "bytes": 92412
+    },
+    "dialogue_nessa_1": {
+      "text": "Moonbloom eases the ache after a lost memory. Bring me a few flowers from the Wilds. We cannot give every name back yet. We can make this morning kinder.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_nessa_1.mp3",
+      "hash": "20815e90ac656599b6e29882076c19b1051736b79fd641ba911be952fb6303a0",
+      "bytes": 148000
+    },
+    "dialogue_garrick_0": {
+      "text": "The Council closed the northern road. I keep it open after dusk. Some orders do not deserve to be obeyed.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "dialogue_garrick_0.mp3",
+      "hash": "43670aaeb39b80ff30b7e36973147037cddb8cc8d29e4f92fdbd343ddbb01606",
+      "bytes": 108712
+    },
+    "dialogue_garrick_1": {
+      "text": "Read the red marks. Dodge, then strike. Clear the creatures from the road, and I can bring our travelers home.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "dialogue_garrick_1.mp3",
+      "hash": "2d73f8d047d2fd7b582bac7df21278941abe0be0a99444f0064bdaf5c84bb003",
+      "bytes": 89486
+    },
+    "dialogue_tavi_0": {
+      "text": "Miso has a red ribbon on his tail. I tied it there so I would know him, even if the sun took his name. Please bring him home.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_tavi_0.mp3",
+      "hash": "c37ffec6c56872835d99674bc6bcf81540f0fd78b8c088e27b18a5517b07f923",
+      "bytes": 111638
+    },
+    "dialogue_pip_0": {
+      "text": "Two spare bandages and something warm. A good pack brings you home. What do you need?",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "dialogue_pip_0.mp3",
+      "hash": "df13728f90dca29e8b3ccfbc41dda857cf3bed688bcec2b85e61ef5f2626c174",
+      "bytes": 68588
+    },
+    "dialogue_brann_0": {
+      "text": "I forged the Council's seals. I thought they kept the sun alive. Now I wonder what they kept locked inside.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_brann_0.mp3",
+      "hash": "1951089543b247a638107a67827d59689e7a93dd00055c224f86159b0cb5999a",
+      "bytes": 120833
+    },
+    "dialogue_brann_1": {
+      "text": "Bring three Stariron Ore and two Memory Crystals. I cannot undo my work. I can make you something strong enough to break it.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_brann_1.mp3",
+      "hash": "0567a23c02c400bdb49b2ecdc97a6cf7d48cccb1c2d3cc3a215a8a1c4877384a",
+      "bytes": 136297
+    },
+    "dialogue_orrin_0": {
+      "text": "Lyra did not flee the Council. She went looking for the people they had erased. I hid her letter before the inspectors came.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_orrin_0.mp3",
+      "hash": "fe14a0b8a6600d216cfbe5636ada7650bb0c74052511ab61c33e0d20e48cd9b6",
+      "bytes": 131282
+    },
+    "dialogue_orrin_1": {
+      "text": "Cross the Mire into the Inkbound Galleries. The witness records will open the drowned archive. If the water speaks with a familiar voice, ask it your name.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_orrin_1.mp3",
+      "hash": "8cd94231c388315a52b8a76541e71a6d08eb5cc5f0b41ba973c8af6576b6532e",
+      "bytes": 178093
+    },
+    "dialogue_orrin_return_0": {
+      "text": "The list you found is not a record of the missing. It is a schedule. Each name was chosen before the dawn.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_orrin_return_0.mp3",
+      "hash": "ee528997318090e30646c9895e2002ef75f78d53e298246c8a8b6555808729f9",
+      "bytes": 127938
+    },
+    "dialogue_orrin_return_1": {
+      "text": "I kept my lighthouse burning for the ships. Now I keep it burning for the people the city pretends were never aboard.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_orrin_return_1.mp3",
+      "hash": "5c3ec1fd0f94e73f7006674b52d0396a0f86b33ef4047705e18101e30e604ebc",
+      "bytes": 113310
+    },
+    "dialogue_selene_0": {
+      "text": "My father's beacon still burns below the archive. He kept it lit for every boat, even when there was no one left to remember him.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_selene_0.mp3",
+      "hash": "703d18230612790358c490d601f86227e67ed6b5af871b1a4de81471bcb13161",
+      "bytes": 119997
+    },
+    "dialogue_selene_1": {
+      "text": "Release the wraiths, then light his lantern. I do not need him to come back. I need the city to know he was here.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_selene_1.mp3",
+      "hash": "9bc10ccf971b82ff92e6901178b57fe35868e4261735c2969a7f38348b346d18",
+      "bytes": 96173
+    },
+    "dialogue_tide_merchant_0": {
+      "text": "Name bracelets sell better than gold here. I would give up a fortune to stop making them.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "dialogue_tide_merchant_0.mp3",
+      "hash": "81267dc5ca26d4d8ef6856338e94c537d1816a2a76f22ac2ff9b2f3982064c89",
+      "bytes": 76111
+    },
+    "dialogue_ivo_0": {
+      "text": "The false sun drowns out the stars. It never destroyed them. The old observatories can prove it.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_ivo_0.mp3",
+      "hash": "847fbefb15b07cccba4ecc581e05aea2155d1af7cad2d81eacd5fb0a1483aaa3",
+      "bytes": 95337
+    },
+    "dialogue_ivo_1": {
+      "text": "Awaken all three. If someone tells you there is nothing beyond their light, look harder.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "dialogue_ivo_1.mp3",
+      "hash": "6bc32cc59d576616a57d200a9c70cdf2fe5815df10088dd6ee30dc25f336d1b0",
+      "bytes": 87396
+    },
+    "dialogue_elara_0": {
+      "text": "Lyra came here willingly. She offered the sun her memories so it would stop taking ours.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_elara_0.mp3",
+      "hash": "30e7f740c35cb0a4fdc399a3349a370917d024b9870d16ca302e42841ac87f57",
+      "bytes": 83634
+    },
+    "dialogue_elara_1": {
+      "text": "Then she learned the seals do more than feed it. They decide which memories survive. The Council has been choosing its own history.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_elara_1.mp3",
+      "hash": "59d3202688bb20cd5276f7365a73d1b63d58ccff64e80f6bf190a2dc441b9933",
+      "bytes": 124594
+    },
+    "dialogue_elara_2": {
+      "text": "Her last memory is beneath Frostglass Vault. Go gently. It is the one she could not bear to lose.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_elara_2.mp3",
+      "hash": "e8a83fec45e7a82fce30c57e94280e0829c98ed713ac2fe53bc2a211b34e57f0",
+      "bytes": 104950
+    },
+    "dialogue_elara_return_0": {
+      "text": "The promise you found was yours. You asked to forget the path, so the Council could never take it from you.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_elara_return_0.mp3",
+      "hash": "7bb7a68c991f6490983eb5272b81a3419280658a362743f74af14fd93d6c4c30",
+      "bytes": 95337
+    },
+    "dialogue_elara_return_1": {
+      "text": "Lyra left her name inside your lantern. She trusted that even without the memory, you would choose to find her again.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_elara_return_1.mp3",
+      "hash": "a26466a5c26f8e6371af2f42b765af7d493d316c19ec5341e31386d358fd2462",
+      "bytes": 112474
+    },
+    "dialogue_north_merchant_0": {
+      "text": "Warm your hands. The road ahead is long, and there is no glory in an empty pack.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_north_merchant_0.mp3",
+      "hash": "1c4a6daf292a7d10d2db3c0bd9e7b0e6111dd5aa4aae57f9ad67ad8bc980ee5f",
+      "bytes": 76111
+    },
+    "dialogue_lyra_0": {
+      "text": "You found me. I hoped you would. I was afraid you would.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_lyra_0.mp3",
+      "hash": "d78142f1d65ddae68c5e6c9e158a6a3ec834f046345334f59bd6b1f4d359d436",
+      "bytes": 59811
+    },
+    "dialogue_lyra_1": {
+      "text": "You chose to forget our plan so they could not steal it from you. I hid my name in the lantern. I had to trust you would follow it.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_lyra_1.mp3",
+      "hash": "9d698dc0e8843d612d7c7a4ec60b9b2ffdd8c39e812cb403f230c5f32e1a02c6",
+      "bytes": 118325
+    },
+    "dialogue_lyra_2": {
+      "text": "The King was never their ruler. He is everyone they erased, holding one another together. You opened his cage.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_lyra_2.mp3",
+      "hash": "c4749691830c711da3912b0f5beea953081b63805906cb0aded84cfcf518fedf",
+      "bytes": 115399
+    },
+    "dialogue_lyra_3": {
+      "text": "We can break the sun, carry its burden, or share its light. This time, no one chooses for us.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_lyra_3.mp3",
+      "hash": "756bd38fb6a2a4f7d2a8f6be8ff444794faed21563e9ec2aa9853fd5350c31e3",
+      "bytes": 86560
+    },
+    "dialogue_lyra_home_0": {
+      "text": "There is still a place for us at that table. Whatever comes next, we will face it together.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_lyra_home_0.mp3",
+      "hash": "2d156641a0e941ba4885e34e1afaede4f40e088f43c4da3f412f746f56867d4f",
+      "bytes": 84888
+    },
+    "dialogue_doran_0": {
+      "text": "A nameplate is a promise made in copper. The miners kept making them after the Council ordered silence.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_doran_0.mp3",
+      "hash": "63fe3f83b3a4311b7ffda7eddaee4df9c4030e26897df070036c33cc993d8597",
+      "bytes": 112474
+    },
+    "dialogue_doran_1": {
+      "text": "East of Copperleaf Trail, the Ember Quarry holds their last delivery. Restore its wards. Bring those names home.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_doran_1.mp3",
+      "hash": "a56c8774722be0132f20c031ca344771f7aaa18d17e1cca21c04acfb4a4fa27d",
+      "bytes": 128774
+    },
+    "dialogue_aster_0": {
+      "text": "The Council's records say these children never existed. Our lake keeps a different ledger.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_aster_0.mp3",
+      "hash": "eed9e3bc582e6a8b63e2253fab1dde5ecc5acc642985fc353696d8f67d24ae09",
+      "bytes": 86560
+    },
+    "dialogue_aster_1": {
+      "text": "Reach the Moonwell through Mistflower Banks. Its witness lamps protect the last page. A city is more than the history its rulers allow.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_aster_1.mp3",
+      "hash": "68e7911417d6496a3cedbddb5f1c50a32a35cafe476f171579f902fe264c6f96",
+      "bytes": 134207
+    },
+    "dialogue_rowan_0": {
+      "text": "No one surrenders a name here. We take turns keeping the fire. That is how a refuge survives.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "dialogue_rowan_0.mp3",
+      "hash": "94dde3535d4d38f4d4022a845b44712a1c76e63c65702f389ab7b797960c81fd",
+      "bytes": 88650
+    },
+    "dialogue_rowan_1": {
+      "text": "The Nightwatch Crypt lies east of the Northern Watchroad. Its stores could carry us through winter. Its lantern still remembers the pilgrims.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "dialogue_rowan_1.mp3",
+      "hash": "fdb01f4b57346b50a1220f271cbea0fc9b305103b278f320c2ffe8740b24bd41",
+      "bytes": 127520
+    },
+    "dialogue_house_inn_0": {
+      "text": "A warm hearth and a place to rest. Leave the road at the door. You are welcome here.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "dialogue_house_inn_0.mp3",
+      "hash": "99dac6531a3387f187182ffa431d2d43c012e72b5f738c34c18d7a6101a1bb6b",
+      "bytes": 79873
+    },
+    "dialogue_house_smith_0": {
+      "text": "Good equipment brings you home. Let us make something that lasts.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "dialogue_house_smith_0.mp3",
+      "hash": "6f19cca7b338183b09ffb148eaf269e7332cc0699c3ade7569f0d802a5ffe861",
+      "bytes": 71096
+    },
+    "dialogue_house_shop_0": {
+      "text": "Supplies for the next road. Take your time.",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_house_shop_0.mp3",
+      "hash": "40bdb840944c0db8c66105e2cee301f97eb170f8c4fea624e33acf3801c951b4",
+      "bytes": 37659
+    },
+    "dialogue_house_alchemy_0": {
+      "text": "A little care goes a long way. What shall we brew?",
+      "cast": "gentle",
+      "voice": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "file": "dialogue_house_alchemy_0.mp3",
+      "hash": "c0caa2da14ad45c9a1f32a983c8dcc445b8ebeb654c3bbd400f175573799c080",
+      "bytes": 47272
+    },
+    "chronicle_0_0": {
+      "text": "Mara kept a forbidden page. Beneath your lantern's handle is a name the dawn could not swallow. The first trail leads north, beyond the old orchard.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "chronicle_0_0.mp3",
+      "hash": "73a7af82b1bc8e94f8964c14aa459b3e413ce1015c05a6c7324d52e0bc0e8822",
+      "bytes": 149672
+    },
+    "chronicle_1_0": {
+      "text": "The Rootwarden traded his daughter's name for one more morning. His orchard kept count of every birthday he forgot. Peace was never as cheap as the Council promised.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "chronicle_1_0.mp3",
+      "hash": "5113f4181d0a0b1a21da08aef96d1bf36b74196d6c345392e0575a7a1d3cc307",
+      "bytes": 151344
+    },
+    "chronicle_2_0": {
+      "text": "The drowned records were not accidents. They were orders. Mara's signature chose the names. But beside Lyra's is an empty line, written in your own hand.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "chronicle_2_0.mp3",
+      "hash": "b1646d051ed33cbd46599f806c14a20a0c8a34a60e3b853c25643b8d565bb235",
+      "bytes": 158031
+    },
+    "chronicle_3_0": {
+      "text": "You chose to forget the path that led to Lyra, so the Council could not steal it. She hid her name in the lantern, and waited for you to choose her a second time.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "chronicle_3_0.mp3",
+      "hash": "774822744c79789086620a349d58903925b39ecb8ca311bdee1e414c98a87ff3",
+      "bytes": 144656
+    },
+    "chronicle_4_0": {
+      "text": "The Hollow King was everyone the Council erased, holding one another together inside the cage. The battle was a release. Now the door behind the dawn stands open.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "chronicle_4_0.mp3",
+      "hash": "b7f0bfdcbca979b55afcdbcf7507ee4db3b8ed7e0798a0e3194305b089c4cb84",
+      "bytes": 163883
+    },
+    "chronicle_5_0": {
+      "text": "A perfect dawn demanded obedience. A human dawn asks what we are willing to carry together. The names you saved will remember the choice you made.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "chronicle_5_0.mp3",
+      "hash": "38a956e84177bf21aed088522d2611dcc9f248f16914275428e145d71fcfc898",
+      "bytes": 137969
+    },
+    "memory_sanctuary_0": {
+      "text": "They told me a name was a small price for peace. When the sun took hers, I still remembered being a father. I just had no one left to love.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "memory_sanctuary_0.mp3",
+      "hash": "2a14b39c92c0a4488fe4e6e84b5871597979522d3a63bcbf45dd6bb6d500d76d",
+      "bytes": 162211
+    },
+    "memory_sanctuary_1": {
+      "text": "Please tell her I kept the lantern lit. I planted a tree for every birthday. The orchard will remember for both of us.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "memory_sanctuary_1.mp3",
+      "hash": "d9579f483ef53595606950f7f37c056614f28c716b0f19cb17d8832028fffeba",
+      "bytes": 125012
+    },
+    "memory_archive_0": {
+      "text": "We built the sun from a captive star-eater. We did not end its hunger. We taught it to eat memories, and hid the cost behind a golden dawn.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "memory_archive_0.mp3",
+      "hash": "ea492ae47a9857d771b6daf5fea941912a4cc5b1b2d236957ff80133fe85c146",
+      "bytes": 152598
+    },
+    "memory_archive_1": {
+      "text": "The witness list bears Mara's signature. Beside Lyra's name, an empty line in your handwriting: erase the way, never the promise.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "memory_archive_1.mp3",
+      "hash": "0344ea953e4feed1b8dd80979c43c74d8cb3c6ea7b7d8fc1be3f9464987e7259",
+      "bytes": 140059
+    },
+    "memory_vault_0": {
+      "text": "You asked to forget our plan. If they took you, they would find no road to me. I hid my name in the lantern and prayed your heart would find the way.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "memory_vault_0.mp3",
+      "hash": "876d4a0d81523dcadf1bab371c0e3d801bfa7c3a2e43c38babee0ef16ed0d241",
+      "bytes": 137969
+    },
+    "memory_vault_1": {
+      "text": "If you find me, bring no grand sacrifice. Bring the people we would be leaving behind. Keep the people, not the prison.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "memory_vault_1.mp3",
+      "hash": "c111fe908c74d687c66417f50db6a29d683d5696f75c805112b5adcfa3c527c7",
+      "bytes": 122923
+    },
+    "skill_warden_0": {
+      "text": "Stay behind me.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_warden_0.mp3",
+      "hash": "a790e63e98a255bcde04f317ce207e63deeeb4c8027d372b8b50dde3f42b1f4d",
+      "bytes": 17597
+    },
+    "skill_warden_1": {
+      "text": "Hold the line.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_warden_1.mp3",
+      "hash": "2e7fa7aea36dd4a9a6697b116fd74de578b930155201d02e6f27f1f4fe25c54e",
+      "bytes": 15089
+    },
+    "skill_warden_2": {
+      "text": "I will not yield.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_warden_2.mp3",
+      "hash": "70d293b0ec914d79d5814d2a45b2620a41c01fab8a7f0471bc86f5ffd58b7564",
+      "bytes": 18851
+    },
+    "skill_ranger_0": {
+      "text": "One clear shot.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_ranger_0.mp3",
+      "hash": "219364184f15b75f4ebf36f865b5c4cde0a90693d2fd11714dca2070d8f454a0",
+      "bytes": 18015
+    },
+    "skill_ranger_1": {
+      "text": "Keep moving.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_ranger_1.mp3",
+      "hash": "e55c610f5cdbfc8c4cf06c2b27b594f2351cbb5dda133e9de54b341c6465efe8",
+      "bytes": 15089
+    },
+    "skill_ranger_2": {
+      "text": "I've got you.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_ranger_2.mp3",
+      "hash": "ce57ba38bf08b5ce7b85804e305bf1124b18b425147ddd0230d6950569b7d63f",
+      "bytes": 15925
+    },
+    "skill_arcanist_0": {
+      "text": "I remember.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_arcanist_0.mp3",
+      "hash": "e106205e318e8d5b4a8e4c29404268a0a5d6c3b4eac66cf06efa065d887d0bd8",
+      "bytes": 14253
+    },
+    "skill_arcanist_1": {
+      "text": "Let the silence break.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_arcanist_1.mp3",
+      "hash": "1972703a26e0f900d12620f338acc7a4305221c6c471a0693739830403d58ec7",
+      "bytes": 22612
+    },
+    "skill_arcanist_2": {
+      "text": "Come back to us.",
+      "cast": "hero",
+      "voice": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "file": "skill_arcanist_2.mp3",
+      "hash": "c36e8c535271fcb5056dd5fbb239690939365d35c44fbcb08feb221c47490780",
+      "bytes": 18015
+    },
+    "ending_remember_0": {
+      "text": "You shatter the false sun. Night falls. For the first time, no one loses a name when morning comes. Lyra takes your hand. Above Frosthaven, a thousand stars wait to be seen. Life will be harder. At last, it belongs to them.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "ending_remember_0.mp3",
+      "hash": "354c9bb1595bb4d017e82488162b70073f756f305120e440d87cc209dfc1bdbc",
+      "bytes": 249982
+    },
+    "ending_sacrifice_0": {
+      "text": "You take my place. The dawn grows warm, and no one forgets again, because you carry every loss. I write your name each morning. At Elderbrook's gate, a lantern waits for someone who promised to come home.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "ending_sacrifice_0.mp3",
+      "hash": "b57f6d6f1f43da8d23c41a88f993e619e510ebb8612f83aacf33aa54b77e907d",
+      "bytes": 212784
+    },
+    "ending_share_0": {
+      "text": "The people you helped answer your lantern with their own. No single life must bear the dawn. Every home holds a little light, every name is kept together. Lyra comes home. For the first time, morning is given freely.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "ending_share_0.mp3",
+      "hash": "ae11fd814de8faa60e20ef682f57c0017a20f6decd80fbbef87ea815a08b9d07",
+      "bytes": 218635
+    },
+    "reveal_rootwarden_0": {
+      "text": "I planted a tree for every year. Tell me why I cannot remember her name.",
+      "cast": "elder",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "file": "reveal_rootwarden_0.mp3",
+      "hash": "8512214adfcd49ac1c59e4af61f846826b6912a9320c367f5b7a000b50b94b39",
+      "bytes": 77783
+    },
+    "reveal_archivist_0": {
+      "text": "We were not lost. They wrote us out. Let the water speak.",
+      "cast": "keeper",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "file": "reveal_archivist_0.mp3",
+      "hash": "aad484e219bf7d2c67dabda220eb645716dc088ed2b507409e99026cad449fef",
+      "bytes": 59811
+    },
+    "reveal_glasskeeper_0": {
+      "text": "Erase the way. Never the promise.",
+      "cast": "lyra",
+      "voice": "Lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "file": "reveal_glasskeeper_0.mp3",
+      "hash": "2de286b2ae690162ec6f9cb5387652880624ee1e00714ecd7b32c320568b89b5",
+      "bytes": 36823
+    },
+    "reveal_hollowking_0": {
+      "text": "We are every name they took. Open the door.",
+      "cast": "narrator",
+      "voice": "George",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "file": "reveal_hollowking_0.mp3",
+      "hash": "d363538112dd7f01a5e03b1d2518961d10785b8b21782bc0df2efb986e975bd9",
+      "bytes": 43510
+    }
+  }
+}

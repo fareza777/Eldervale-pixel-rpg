@@ -1,0 +1,29 @@
+{
+  "tool": "Built-in image_gen",
+  "created": "2026-10-04",
+  "assets": [
+    {
+      "source": "public/assets/art/story-cinematics.png",
+      "reuse": [
+        "public/assets/art/story-0.webp",
+        "public/assets/art/story-1.webp",
+        "public/assets/art/story-2.webp",
+        "public/assets/art/story-3.webp"
+      ],
+      "prompt": "Create a production cinematic storyboard atlas for the mobile dark fantasy RPG ELDERVALE — THE HOLLOW SUN. Four equal panels in a precise 2 columns x 2 rows grid, each panel portrait 3:4, no gaps, no borders, absolutely NO TEXT OR LETTERING. Whole image portrait 3:4. Use the supplied image only as a world/palette reference, not an edit target. Premium hand-painted cinematic JRPG background art, refined anime-environment illustration, subtle realistic materials, midnight ink blue, warm antique brass, ember light, restrained saturation, luminous mist. \nPanel 1 top left: an intimate abandoned home at dawn, two tea cups on a wooden table and a small brass lantern, one empty chair, a pale rectangle where a family portrait was removed, window overlooking a distant eclipsed golden sun. No people or visible faces.\nPanel 2 top right: a vast cliffside city and stone viaduct below a broken hollow sun with black center, a solitary traveler seen entirely FROM BEHIND wearing a dark hood and armor, small against the landscape, lantern held low. No visible face, eyes, skin, animals or instruments.\nPanel 3 bottom left: a flooded ancient archive, rows of shelves and submerged papers, one page on a stone desk lit by a narrow beam of gold, a dark gloved hand reaching toward a blank erased seal. No legible letters; no exposed face or skin. Suggest a concealed betrayal and dangerous discovery.\nPanel 4 bottom right: a dark-hooded woman Lyra wearing a COMPLETELY OPAQUE featureless engraved metal face mask, black gloves and layered navy cloak, standing at a huge fractured star mechanism in an ancient observatory, turned away in profile so the closed mask is barely visible, holding a small lantern in both hands. Her face must be fully covered, NO eyes or biological facial details. Warm light catches the lantern, the background has distant pale stars, atmosphere of fragile resolve.\nKeep crucial subjects at each panel's center-upper 60 percent and leave lower 25 percent dark and visually quiet for separately rendered subtitles. All figures clothed and fully masked or turned completely away. No full faces, no exposed eyes, no text, no UI, no logos, no watermark, no instruments. Four clearly distinct but coherent scenes, elegant, emotionally cinematic, nothing garish."
+    },
+    {
+      "source": "public/assets/art/flora-source.png",
+      "reuse": [
+        "public/assets/pack/flora.png",
+        "public/assets/pack/flora.json"
+      ],
+      "transparent": true,
+      "prompt": "Production 2D pixel-art botanical decal atlas for a premium top-down 3/4-view fantasy RPG. Exactly SIX isolated assets in a regular 3 columns x 2 rows grid, generous transparent margins between every cell. TRUE TRANSPARENT BACKGROUND. No backgrounds, NO green square bases, NO sod blocks, NO floor tiles, NO platforms, NO pots, NO detached cast shadows.\nTop row: (1) a delicate small cluster of ivory-white moonbloom flowers with muted gray-sage leaves, (2) a small sparse cluster of dusty-lilac wildflowers with slender stems, (3) a restrained tuft of dry golden meadow grass with a few muted amber seed heads.\nBottom row: (4) a loose natural scattering of six warm copper fallen leaves, (5) five small weathered gray river pebbles with tiny desaturated moss crevices, (6) a slender small clump of muted blue-gray shoreline reeds.\nEvery asset seen from the same raised top-down RPG camera, clean distinct silhouette, crisp handcrafted pixel clusters, original 32-bit fantasy RPG sprite aesthetic, 32x32-pixel effective detail per asset although delivered large, restrained desaturated colors suitable for stone, warm earth, and slate blue ground. Flower stems meet the baseline visibly, no floating pieces. Objects small and natural, flowers are botanically readable, no neon greens or bright saturated glitter. No characters, creatures, faces, text, numbers, labels, logos, borders or watermark. Background alpha zero around each asset. These will be cropped into reusable game sprites."
+    }
+  ],
+  "constraints": {
+    "largeIllustrations": "Opaque masks, hoods or entirely rear-facing figures. No visible biological facial details.",
+    "audio": "Speech, nature and Foley; no music or musical instruments."
+  }
+}

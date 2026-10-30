@@ -1,0 +1,19 @@
+node_modules/
+dist/
+test-results/
+*.log
+asset-archive/
+releases/*.zip
+releases/*.apk
+releases/*.aab
+android/.gradle/
+android/**/build/
+android/local.properties
+android/signing.properties
+android/keystore/
+.android-qa/
+.audio-sources/
+
+# Remotion build cache and nested VCS metadata
+marketing/remotion/.bundle/
+marketing/remotion/.git.remotion/

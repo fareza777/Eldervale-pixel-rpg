@@ -1,0 +1,18 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const spec='docs/superpowers/specs/2026-10-04-eldervale-design.md';
+let text=readFileSync(spec,'utf8');
+text=text.replace('using sprites, scenery, sound and inventory art copied', 'using sprites, scenery and selected inventory icons copied');
+text=text.replace('Forest teal, antique gold and parchment;', 'Obsidian, midnight blue, antique gold and parchment;');
+text=text.replace('protagonist portrait and twelve-item atlas', 'fully masked protagonist and NPC portraits, and a twelve-item atlas');
+text=text.replace('The initial language is Indonesian; key labels can switch to English.', 'All interface and story text is English. Menus use compact layouts and pagination. On phones, character overview and talents have separate tabs. Large portraits hide all facial features behind opaque masks and hoods; gameplay sprites appear naturally, including faces, following the user’s explicit exception.');
+text=text.replace('## Reliability', '## Audio\nSix stereo nature loops and fourteen physical Foley textures, procedurally authored as reusable WAVs. Wind, leaves, water, icy gusts and ruin drips; no musical instruments, melodies or voices. Original instrumental audio is archived outside the public game. Ambience crossfades between regions and pauses in hidden tabs.\n\n## Reliability');
+text=text.replace('Main objectives require', 'Gathering quests count historical collected nodes even if materials were used before acceptance. Region rebuilds release old tweens and timers. Main objectives require');
+writeFileSync(spec,text);
+const plan='docs/superpowers/plans/2026-10-04-eldervale.md';
+text=readFileSync(plan,'utf8').replace('Indonesian default.', 'English throughout. Obsidian/midnight/gold theme. Large portraits fully masked; gameplay sprites natural with faces permitted. Nature ambience and SFX only; no instruments.');
+text=text.replace('original audio and reusable generated portraits/icons', 'selected reusable inventory icons; archive instrumental originals outside the build');
+text=text.replace('adaptive music', 'crossfading nature ambience');
+text=text.replace('Vitest 3.2.7', 'Vitest 4.1.11');
+text=text.replaceAll('- [ ]','- [x]');
+text += '\n## Final review resolutions\n- Late gathering acceptance: credits historical nodes; failing regression test observed and fixed.\n- Region tween retention: repeated loads grew 11 → 77 tweens before the fix, remain 11 after it.\n- Mobile masked portrait visibility, resumed region ambience, and review draft preservation fixed.\n- Mobile character panels split into Overview and Talents to avoid a long vertical panel.\n- Instrumental audio and unused uncovered art excluded from production.\n';
+writeFileSync(plan,text);

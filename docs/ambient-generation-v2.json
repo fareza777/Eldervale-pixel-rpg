@@ -1,0 +1,31 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "reference": "https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert",
+  "music": false,
+  "instruments": false,
+  "birds": false,
+  "assets": [
+    {
+      "name": "still-air-v2",
+      "prompt": "Near-silent sheltered stone courtyard at dusk. Very distant gentle breeze moving through open space. Calm, spacious, smooth natural air, clean soft background without events. No birds, insects, animals, voices, leaves, rustling, crackling, static, wind distortion, mechanical hum, drones, tones, melody, music or instruments. Quiet fantasy game atmosphere, seamless loop.",
+      "source": ".audio-sources/still-air-v2.mp3",
+      "secondsRequested": 20,
+      "loop": true
+    },
+    {
+      "name": "stone-air-v2",
+      "prompt": "Near-silent empty ancient stone passage. Subtle distant natural air through a far doorway. Calm, warm, spacious, nearly still. Clean smooth atmosphere without events. No resonant tones, drones, music, instruments, voices, creatures, dripping, fire, crackling, rattling, static or harsh wind. Restrained fantasy game atmosphere, seamless loop.",
+      "source": ".audio-sources/stone-air-v2.mp3",
+      "secondsRequested": 20,
+      "loop": true
+    },
+    {
+      "name": "still-water-v2",
+      "prompt": "Quiet distant water gently flowing beside a sheltered lake. Very soft smooth water wash from far away. Peaceful, spacious, nearly silent, natural water only. Clean background without sharp details. No splashes, close bubbling, rain, birds, insects, voices, crackling, rustling, static, roaring, drones, tones, music or instruments. Quiet fantasy exploration, seamless loop.",
+      "source": ".audio-sources/still-water-v2.mp3",
+      "secondsRequested": 20,
+      "loop": true
+    }
+  ]
+}

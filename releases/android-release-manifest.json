@@ -1,0 +1,18 @@
+{
+  "version": "1.6.0",
+  "versionCode": 8,
+  "appId": "com.eldervale.hollowsun",
+  "monetization": "Google test ads; live purchase product requires Play Console configuration",
+  "files": [
+    {
+      "file": "Eldervale-Android-v1.6.0.apk",
+      "bytes": 47690159,
+      "sha256": "9beb17fdfde4f28c7aaf66c240fab9d5bcb37e65fef4dfa3a89bd976b4b01209"
+    },
+    {
+      "file": "Eldervale-Play-v1.6.0.aab",
+      "bytes": 43401663,
+      "sha256": "61178c53b15990186987fe02c65168ebb3a0cbea25c753d4793fe4df69d8b6c3"
+    }
+  ]
+}

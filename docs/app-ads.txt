@@ -1,0 +1,4 @@
+# Eldervale app-ads.txt
+# Publisher account: ca-app-pub-6279186647593327
+google.com, pub-6279186647593327, DIRECT, f08c47fec0942fa0
+# The current closed-test AAB intentionally keeps Google's official test IDs.

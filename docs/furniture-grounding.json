@@ -1,0 +1,290 @@
+[
+  {
+    "id": "0",
+    "crop": [
+      60,
+      34,
+      252,
+      308
+    ],
+    "width": 76,
+    "height": 108,
+    "pixelDensity": 2,
+    "worldWidth": 38.0,
+    "worldHeight": 54.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "1",
+    "crop": [
+      34,
+      93,
+      307,
+      298
+    ],
+    "width": 93,
+    "height": 69,
+    "pixelDensity": 2,
+    "worldWidth": 46.5,
+    "worldHeight": 34.5,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "2",
+    "crop": [
+      106,
+      66,
+      229,
+      302
+    ],
+    "width": 32,
+    "height": 62,
+    "pixelDensity": 2,
+    "worldWidth": 16.0,
+    "worldHeight": 31.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "3",
+    "crop": [
+      37,
+      13,
+      251,
+      308
+    ],
+    "width": 75,
+    "height": 104,
+    "pixelDensity": 2,
+    "worldWidth": 37.5,
+    "worldHeight": 52.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "4",
+    "crop": [
+      37,
+      34,
+      299,
+      285
+    ],
+    "width": 88,
+    "height": 84,
+    "pixelDensity": 2,
+    "worldWidth": 44.0,
+    "worldHeight": 42.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "5",
+    "crop": [
+      39,
+      37,
+      308,
+      285
+    ],
+    "width": 93,
+    "height": 86,
+    "pixelDensity": 2,
+    "worldWidth": 46.5,
+    "worldHeight": 43.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "6",
+    "crop": [
+      63,
+      65,
+      275,
+      291
+    ],
+    "width": 60,
+    "height": 64,
+    "pixelDensity": 2,
+    "worldWidth": 30.0,
+    "worldHeight": 32.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "7",
+    "crop": [
+      23,
+      11,
+      274,
+      298
+    ],
+    "width": 84,
+    "height": 96,
+    "pixelDensity": 2,
+    "worldWidth": 42.0,
+    "worldHeight": 48.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "8",
+    "crop": [
+      37,
+      81,
+      314,
+      260
+    ],
+    "width": 100,
+    "height": 65,
+    "pixelDensity": 2,
+    "worldWidth": 50.0,
+    "worldHeight": 32.5,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "9",
+    "crop": [
+      34,
+      46,
+      311,
+      256
+    ],
+    "width": 116,
+    "height": 88,
+    "pixelDensity": 2,
+    "worldWidth": 58.0,
+    "worldHeight": 44.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "10",
+    "crop": [
+      52,
+      0,
+      268,
+      278
+    ],
+    "width": 76,
+    "height": 98,
+    "pixelDensity": 2,
+    "worldWidth": 38.0,
+    "worldHeight": 49.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "11",
+    "crop": [
+      45,
+      21,
+      267,
+      276
+    ],
+    "width": 76,
+    "height": 87,
+    "pixelDensity": 2,
+    "worldWidth": 38.0,
+    "worldHeight": 43.5,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "12",
+    "crop": [
+      43,
+      10,
+      273,
+      267
+    ],
+    "width": 70,
+    "height": 78,
+    "pixelDensity": 2,
+    "worldWidth": 35.0,
+    "worldHeight": 39.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "13",
+    "crop": [
+      27,
+      1,
+      290,
+      257
+    ],
+    "width": 82,
+    "height": 80,
+    "pixelDensity": 2,
+    "worldWidth": 41.0,
+    "worldHeight": 40.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "14",
+    "crop": [
+      18,
+      53,
+      313,
+      261
+    ],
+    "width": 85,
+    "height": 60,
+    "pixelDensity": 2,
+    "worldWidth": 42.5,
+    "worldHeight": 30.0,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  },
+  {
+    "id": "15",
+    "crop": [
+      84,
+      0,
+      213,
+      283
+    ],
+    "width": 44,
+    "height": 97,
+    "pixelDensity": 2,
+    "worldWidth": 22.0,
+    "worldHeight": 48.5,
+    "foot": {
+      "x": 0.5,
+      "y": 1
+    }
+  }
+]

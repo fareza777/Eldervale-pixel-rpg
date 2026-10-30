@@ -1,0 +1,97 @@
+{
+  "music": false,
+  "instruments": false,
+  "birdRecordingUsed": false,
+  "recordingSource": {
+    "title": "Still spaces \u2014 generated nature effects",
+    "author": "ElevenLabs Sound Effects v2",
+    "license": "Generated with the user\u2019s ElevenLabs account; account terms apply.",
+    "url": "https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert",
+    "files": [
+      "still-air-v2.mp3",
+      "still-water-v2.mp3",
+      "stone-air-v2.mp3"
+    ]
+  },
+  "mastering": {
+    "highpassHz": 85,
+    "overlapSeconds": 3,
+    "hardClipping": false,
+    "profile": "Nearly still sheltered air, quiet stone spaces and distant water; no birds, crackle or added noise.",
+    "combatGain": 0.22,
+    "combatAttackSeconds": 0.18,
+    "combatRecoverySeconds": 0.9
+  },
+  "measurements": [
+    {
+      "file": "assets/audio/ambience/forest.wav",
+      "source": "still-air-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 1100,
+      "peak": 0.055,
+      "rms": 0.003781,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "assets/audio/ambience/wind.wav",
+      "source": "still-air-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 1000,
+      "peak": 0.055,
+      "rms": 0.003859,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "assets/audio/ambience/water.wav",
+      "source": "still-water-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 1700,
+      "peak": 0.055,
+      "rms": 0.002811,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "assets/audio/ambience/frost.wav",
+      "source": "still-air-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 800,
+      "peak": 0.055,
+      "rms": 0.003877,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "assets/audio/ambience/ruins.wav",
+      "source": "stone-air-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 750,
+      "peak": 0.021266,
+      "rms": 0.0035,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "assets/audio/ambience/spire.wav",
+      "source": "stone-air-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 650,
+      "peak": 0.018214,
+      "rms": 0.003,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "assets/audio/ambience/hearth.wav",
+      "source": "stone-air-v2.mp3",
+      "seconds": 17.0,
+      "highpassHz": 85,
+      "lowpassHz": 550,
+      "peak": 0.016966,
+      "rms": 0.0028,
+      "seamDelta": 0.0
+    }
+  ]
+}

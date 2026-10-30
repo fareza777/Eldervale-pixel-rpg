@@ -1,0 +1,6 @@
+import http from 'node:http';
+import {createReadStream,statSync} from 'node:fs';
+import {resolve,extname,sep} from 'node:path';
+const root=resolve('marketing/store-v1');
+const types={'.html':'text/html; charset=utf-8','.png':'image/png','.mp4':'video/mp4','.json':'application/json','.zip':'application/zip','.vtt':'text/vtt; charset=utf-8'};
+http.createServer((req,res)=>{try{const rel=decodeURIComponent(new URL(req.url,'http://localhost').pathname),p=resolve(root,'.'+(rel==='/'?'/exports/index.html':rel));if(p!==root&&!p.startsWith(root+sep)){res.writeHead(403).end();return;}const stat=statSync(p);const h={'Content-Type':types[extname(p)]||'application/octet-stream','Accept-Ranges':'bytes'};if(req.headers.range){const m=/bytes=(\d+)-(\d*)/.exec(req.headers.range);if(!m){res.writeHead(416).end();return;}const a=Number(m[1]),b=m[2]?Math.min(Number(m[2]),stat.size-1):stat.size-1;if(a>b){res.writeHead(416).end();return;}res.writeHead(206,{...h,'Content-Range':`bytes ${a}-${b}/${stat.size}`,'Content-Length':b-a+1});createReadStream(p,{start:a,end:b}).pipe(res);}else{res.writeHead(200,{...h,'Content-Length':stat.size});createReadStream(p).pipe(res);}}catch{res.writeHead(404).end('Not found');}}).listen(4180,'127.0.0.1',()=>console.log('Eldervale asset gallery: http://127.0.0.1:4180/exports/index.html'));

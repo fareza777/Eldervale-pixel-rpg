@@ -1,0 +1,121 @@
+{
+  "images": [
+    {
+      "file": "app-icon-512.png",
+      "width": 512,
+      "height": 512,
+      "channels": "RGBA",
+      "bytes": 479731,
+      "sha256": "8dc8ae4f414f235a91fe5b7f297a74a2293b5840b2968eafbeee091b40f3ccbf"
+    },
+    {
+      "file": "feature-graphic-1024x500.png",
+      "width": 1024,
+      "height": 500,
+      "channels": "RGB",
+      "bytes": 865695,
+      "sha256": "0c7bd86dede55e2fd8022d170655a5d6b194c75ffb9ba2c48de3bbc57131fe5d"
+    },
+    {
+      "file": "screenshot-01-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1434234,
+      "sha256": "1e4d1ddb0ca22c89bf4caec68b5611a204b0af3b6ae3795656e272e4a89c0214"
+    },
+    {
+      "file": "screenshot-02-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1260432,
+      "sha256": "c7ee8d85e30f7b329efecfedf7866cd3f5ef9b786ce670f3fb3b577223963447"
+    },
+    {
+      "file": "screenshot-03-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1175842,
+      "sha256": "2da071f45722ec128408d11144d5c9d032d6a12eda97d4ca09b09173fdf03585"
+    },
+    {
+      "file": "screenshot-04-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 947009,
+      "sha256": "f554779278ef27e1446637160013bcba443536e1b505153f64f50fdf6548a1d3"
+    },
+    {
+      "file": "screenshot-05-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1362412,
+      "sha256": "907b7157bbc8d6a9325e0f9948438e2d7a54d9e5a4fb7782c39585243507e699"
+    },
+    {
+      "file": "screenshot-06-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1155988,
+      "sha256": "653cead4ddd1f87cf6fb1fe91ad278073b0a136ddb825c15937f1c8dcca9b73c"
+    },
+    {
+      "file": "screenshot-07-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1019508,
+      "sha256": "71cd2ed24c722849d921db6d3927d2ab5c08faf9142ccf373ef53255f3e3c282"
+    },
+    {
+      "file": "screenshot-08-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "channels": "RGB",
+      "bytes": 1164154,
+      "sha256": "3de183d5f710f37ff1b7842d821997128ad6a30dae27a1659eb61390b49cefab"
+    }
+  ],
+  "videos": [
+    {
+      "file": "eldervale-landscape-1080p.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "durationSeconds": 40,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "maxVolumeDb": -1.2,
+      "bytes": 35524457,
+      "sha256": "82a95fd240dad449e77cec5786708a5d65d6cb82d988456f84f685e3b12759f9",
+      "fullDecode": "pass"
+    },
+    {
+      "file": "eldervale-portrait-1080p.mp4",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "durationSeconds": 40,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "maxVolumeDb": -1.2,
+      "bytes": 31147187,
+      "sha256": "9a3e983aa71c329de1f72205f6eaef9635f712f89e876118a95a069b4f768358",
+      "fullDecode": "pass"
+    }
+  ],
+  "checks": [
+    "10 required PNG files, exact dimensions and channel formats",
+    "Icon below 1024 KB",
+    "Two complete 40-second 30 fps H.264/AAC videos",
+    "Both videos fully decoded without errors",
+    "Audio peaks below 0 dBFS",
+    "English subtitle track included",
+    "No game source or signed app packages modified"
+  ]
+}

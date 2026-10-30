@@ -1,0 +1,24 @@
+{
+  "palette": "Obsidian, midnight blue, aged gold",
+  "largePortraitFaces": "Fully hidden by opaque masks and hoods",
+  "gameplaySprites": "Original natural faces permitted by the user",
+  "images": {
+    "key-art.png": {"path": "public/assets/art/key-art.png", "width": 1536, "height": 1024, "use": ["title", "onboarding", "ending"]},
+    "hero.png": {"path": "public/assets/art/hero.png", "width": 1254, "height": 1254, "use": ["character", "HUD", "creation"]},
+    "app-icon.png": {"path": "public/assets/art/app-icon.png", "width": 1254, "height": 1254, "use": ["app icon", "browser icon"]},
+    "veiled-portraits.png": {
+      "path": "public/assets/art/veiled-portraits.png", "width": 1254, "height": 1254,
+      "columns": 3, "rows": 2, "frameWidth": 418, "frameHeight": 627,
+      "rowMajorFrames": ["archivist", "alchemist", "warden", "smith", "merchant", "lantern bearer"]
+    },
+    "relics.png": {
+      "path": "public/assets/art/relics.png", "width": 1448, "height": 1086,
+      "columns": 4, "rows": 3, "frameWidth": 362, "frameHeight": 362,
+      "rowMajorFrames": ["sword", "bow", "staff", "lantern", "armor", "cloak", "ring", "amulet", "healing potion", "aether potion", "crystal", "feather"]
+    }
+  },
+  "sourceAtlases": "Copied from E:/Roguelike Opus 55/public/assets/pack; original unchanged.",
+  "audio": "public/assets/audio/sound-manifest.json",
+  "furniture": "docs/furniture-art.json",
+  "regenerateAudio": "python tools/package-exploration-assets.py"
+}

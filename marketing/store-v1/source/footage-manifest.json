@@ -1,0 +1,62 @@
+{
+  "finalVideoSources": {
+    "movingGameplay": {
+      "resolution": [
+        864,
+        1536
+      ],
+      "fps": 30,
+      "framesPerClip": 120,
+      "method": "Actual Phaser simulation advanced in fixed 33.333 ms steps, with a full-page screenshot after every rendered frame. Inputs call the existing movement, attack, dodge and skill methods. No UI or hit effects are fabricated.",
+      "scenes": [
+        {
+          "clip": "town",
+          "region": "elderbrook"
+        },
+        {
+          "clip": "frost",
+          "region": "frosthaven"
+        },
+        {
+          "clip": "river",
+          "region": "tidecross"
+        },
+        {
+          "clip": "combat",
+          "region": "wilds"
+        },
+        {
+          "clip": "magic",
+          "region": "wilds"
+        },
+        {
+          "clip": "dungeon",
+          "region": "archive_halls"
+        },
+        {
+          "clip": "interior",
+          "region": "elder_inn"
+        }
+      ],
+      "errors": []
+    },
+    "menus": [
+      {
+        "clip": "dialogue",
+        "source": "06-dialogue.png",
+        "method": "Static authentic high-resolution menu capture, encoded as a five-second video"
+      },
+      {
+        "clip": "talents",
+        "source": "03-talents.png",
+        "method": "Static authentic high-resolution menu capture, encoded as a five-second video"
+      },
+      {
+        "clip": "inventory",
+        "source": "07-inventory.png",
+        "method": "Static authentic high-resolution menu capture, encoded as a five-second video"
+      }
+    ]
+  },
+  "notes": "Earlier real-time recording was replaced with fixed-step HD captures. These are the sources used in both final MP4 exports."
+}

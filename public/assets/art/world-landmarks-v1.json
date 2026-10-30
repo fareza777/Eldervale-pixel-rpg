@@ -1,0 +1,92 @@
+{
+  "frames": {
+    "lantern_well": {
+      "frame": {
+        "x": 96,
+        "y": 19,
+        "w": 452,
+        "h": 585
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 452,
+        "h": 585
+      },
+      "sourceSize": {
+        "w": 452,
+        "h": 585
+      }
+    },
+    "archive_gate": {
+      "frame": {
+        "x": 658,
+        "y": 47,
+        "w": 550,
+        "h": 535
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 550,
+        "h": 535
+      },
+      "sourceSize": {
+        "w": 550,
+        "h": 535
+      }
+    },
+    "frost_obelisk": {
+      "frame": {
+        "x": 108,
+        "y": 635,
+        "w": 429,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 429,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 429,
+        "h": 566
+      }
+    },
+    "bronze_furnace": {
+      "frame": {
+        "x": 680,
+        "y": 649,
+        "w": 491,
+        "h": 523
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 491,
+        "h": 523
+      },
+      "sourceSize": {
+        "w": 491,
+        "h": 523
+      }
+    }
+  },
+  "meta": {
+    "image": "world-landmarks-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

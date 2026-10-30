@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Eldervale</string>
+    <string name="title_activity_main">Eldervale</string>
+    <string name="package_name">com.eldervale.hollowsun</string>
+    <string name="custom_url_scheme">com.eldervale.hollowsun</string>
+</resources>

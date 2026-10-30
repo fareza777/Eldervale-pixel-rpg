@@ -1,0 +1,42 @@
+ELDERVALE — THE HOLLOW SUN
+
+ANDROID PORTRAIT EDITION — v1.6.0
+
+Install Eldervale-Android-v1.6.0.apk on an Android phone.
+Eldervale-Play-v1.6.0.aab is the signed Google Play upload bundle.
+The app has not been published to Google Play.
+
+This build uses official Google TEST AdMob banner, interstitial and rewarded ads.
+Support includes a one-time Remove Ads option with the intended US$4.99 price.
+Real checkout needs the Play Console product and public licensing key.
+Ads are muted. Gameplay has no banner. Rewarded supplies are optional.
+Configuration: E:/Dawnbound RPG GPT 61/docs/monetization.md
+
+Touch the left side to summon the floating joystick. Drag gently to walk or farther to run. Hold Attack with your right thumb.
+Movement responds and turns smoothly, then promptly stops when released.
+Settings includes fixed/floating joystick, joystick size, control visibility, auto-run, aim assist, classic/whirl sword combo, hit effects, comfort and difficulty.
+Skill, Dodge and Heal sit beside Attack.
+Face an NPC/object for the right-side contextual icon.
+Town residents walk around and stop to face you when approached.
+Face a house door and tap Enter. Follow roads to their ends to change areas.
+27 outdoor areas, 6 towns, 30 furnished houses, 26 quests and 43 items.
+Choose a quest in Journal to follow its next step.
+The top-right menu button opens Bag, Journal, Map and Menu.
+Tap your portrait for stats and talents.
+Android Back closes a panel or pauses gameplay.
+
+The APK works offline from its first launch and saves progress on the device.
+Back up journey / Restore backup are available in Menu.
+
+The browser development preview is http://127.0.0.1:4174.
+It uses the same portrait phone layout.
+
+Large portraits are fully masked;
+gameplay sprites appear naturally. Audio contains nature ambience,
+non-tonal Foley and 75 offline ElevenLabs voice performances, with no instruments.
+The illustrated prologue can be skipped or replayed from Menu / About.
+Voices have an independent volume control in Settings.
+
+Source project, reusable art metadata and verification notes:
+E:/Dawnbound RPG GPT 61/README.md
+E:/Dawnbound RPG GPT 61/docs/android.md
